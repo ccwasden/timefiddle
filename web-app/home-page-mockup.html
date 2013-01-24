@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Home Page Mockup</title>
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+	<body>
+		<div class="main-wrapper">
+			<div id="header">
+				<a id="logo" href="#" title="TimeFiddle">Some Cool Logo</a>
+				<ul>
+					<li class="active big"><a href="#">TimeFiddle</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#" class="create-event">Create Event</a></li>
+					<li><a href="#">Login</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="content">
+			<div class="homepage main-wrapper">
+				<h1 class="center no-margin">
+					<text>Welcome to</text> <strong>TimeFiddle</strong>
+				</h1>
+				<h2 class="center no-margin">
+					<text>Find times to meet</text>
+				</h2>
+
+				<div class="center get-apps">
+					<a href="#"><img src="images/available-on-app-store.png" /></a>
+					<a href="#"><img src="images/available-on-google-play.png" /></a>
+				</div>
+
+				<div class="center">
+					<p>Download the app or <a href="#">create an event</a></p>
+				</div>
+			</div>
+			<div id="footer" class="center main-wrapper">
+				<div class="separator-both margin-bottom">
+					<hr style="border:1px solid #eee">
+				</div>
+				<ul>
+					<li>
+						<a href="#">Download for Mobile</a>
+					</li>
+					<li>
+						<a href="#">Privacy Policy</a>
+					</li>
+					<li>
+						<a href="#">Support</a>
+					</li>
+					<li>
+						<a href="#">Contact</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
+
+<style type="text/css">
+
+*{
+	padding:0;
+	margin:0;
+	border:none;
+	outline:none;
+	text-decoration: none;
+}
+
+body {
+	background:#fafafa;
+	font-family:"Myriad Pro", Arial, Helvetica, Tahoma, sans-serif;
+}
+
+/* Begin Simple Styling */
+
+.center {
+	text-align:center;
+}
+
+.left {
+	float:left;
+}
+
+.right {
+	float:right;
+}
+
+.no-margin {
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+}
+.clearfix {
+	clear:both;
+}
+
+.margin-bottom {
+	margin-bottom:10px;
+}
+
+/* End Simple Styling */
+
+/* Begin of Headers */
+
+h1, h2, h3, h4, h5, h6, h2.big {
+	color:#1c1c1c;
+}
+
+h1, h2.big {
+	font-size:64px;
+	font-weight:200;
+	letter-spacing:-3px;
+	line-height:80px;
+	margin-bottom:0;
+}
+
+h1 > strong, h2.big > strong {
+	font-weight:200;
+	color:#00688B;
+}
+
+h2 {
+	font-size:24px;
+	font-weight:200;
+	margin-bottom:12px;
+}
+
+h2 > strong, h2.strong {
+	font-weight:600;
+}
+
+h2.mid {
+	font-size:44px;
+	font-weight:100;
+	letter-spacing:-1px;
+	margin-bottom:32px;
+}
+
+h3 {
+	font-size:20px;
+	font-weight:700;
+	letter-spacing:-1px;
+}
+
+h4, h5, h6 {
+	margin:0 0 8px 0;
+	font-size:16px;
+}
+
+/* End of Headers */
+
+/* Basic Elements */
+
+a {
+	outline:none;
+	color:#00688B;
+}
+ul {
+	list-style:none;
+}
+
+ul, p {
+	font-size:16px;
+	line-height:26px;
+	font-weight:400;
+	margin-bottom:20px;
+	color:#1c1c1c;
+}
+
+/* End Basic Elements */
+
+.main-wrapper {
+	width: 945px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+#header {
+	position:relative;
+	height:120px;
+}
+#header ul {
+	position:absolute;
+	right:0;
+	top:34px;
+	z-index:2;
+}
+
+#header ul li {
+	display:inline;
+}
+
+#header ul li a {
+	position:relative;
+	color:#a1a0a0;
+	margin-left:40px;
+	text-shadow:0 1px 0 #fff;
+}
+
+#header ul li a:hover, #header ul li.active a {
+	color:#00688B;
+}
+
+#header ul li.active a{
+	border-bottom:1px solid #eee;
+}
+
+#header ul li.active a:after {
+	/*
+	opacity:1;
+	-ms-filter:none;
+	filter:none;
+	position:absolute;
+	z-index:-1;
+	left:50%;
+	top:10px;
+	margin-left:-45px;
+	content:"";
+	width:89px;
+	height:17px;
+	background:url("/img/menu/menu.png");
+	*/
+}
+#header ul li.active a:after.big a:after {
+	/*width:130px; margin-left:-65px;background:url("/img/menu/menu_big.png");*/
+}
+
+/* Begin of footer */
+
+#footer {
+	margin-top:20px;
+}
+#footer .small {
+	font-size:12px;
+	color:#afafaf;
+}
+#footer .small span {
+	color:#7c7c7c;
+}
+#footer ul li {
+	display:inline-block;
+	margin-right:40px;
+}
+#footer ul li:last-child {
+	margin:0;
+}
+#footer ul li a {
+	color:#b6b5b5;
+}
+#footer ul li a:hover {
+	color:#00688B;
+}
+
+.get-apps {
+	margin:40px 0px 20px 0px ;
+}
+
+.get-apps img {
+	max-height:50px;
+	margin:5px;
+}
+
+/* End of footer */
+
+</style>
+
+<script type="text/javascript">
+
+	var navbarLinks = $("#header").find("li");
+
+	navbarLinks.click(function(e){
+		navbarLinks.removeClass("active");
+		$(this).addClass("active big");
+	});
+
+	$(".create-event").click(function(e){
+
+		$.ajax({
+			url: "mockup-create.html",
+			dataType: "html",
+			success: function(data){
+				console.log(data);
+			}
+		});
+
+
+	});
+
+</script>
