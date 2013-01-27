@@ -1,0 +1,40 @@
+$base-color: #1074bc !default;
+$active-color: darken(saturate($base-color, 55%), 10%) !default;
+$neutral-color: #e0e0e0;
+$base-gradient: 'matte'!default;
+$font-family: "Helvetica Neue", HelveticaNeue, "Helvetica-Neue", Helvetica, "BBAlpha Sans", sans-serif !default;
+$page-bg-color: #FFF !default;
+$alert-color: red !default;
+$confirm-color: #92cf00 !default;
+$global-row-height: 2.6em !default;
+$base-gradient: 'matte';
+
+
+@import 'sencha-touch/default/all';
+
+// You may remove any of the following modules that you
+// do not use in order to create a smaller css file.
+@include sencha-panel;
+@include sencha-buttons;
+@include sencha-sheet;
+@include sencha-picker;
+@include sencha-tabs;
+@include sencha-toolbar;
+@include sencha-toolbar-forms;
+@include sencha-indexbar;
+@include sencha-list;
+@include sencha-layout;
+@include sencha-carousel;
+@include sencha-form;
+@include sencha-msgbox;
+@include sencha-loading-spinner;
+//@include sencha-list-paging;
+//@include sencha-list-pullrefresh;
+
+
+.x-button {
+	@include border-radius(2px);
+	@include text-shadow(rgba(0,0,0,0.1) 0px 1px);
+}
+
+@include sencha-button-ui('blueBtn', #1074bc, 'matte');
