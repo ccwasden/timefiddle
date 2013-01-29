@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form(action="/sendEmail", name="emailForm", method="post")
+    input(type="text", name="email", placeholder="Enter an email")
+    br
+    input(type="text", name="name", placeholder="Enter your name")
+    br
+    input(type="text", name="eventDate", placeholder="Enter date of event")
+  a(href="javascript:document.forms['emailForm'].submit();") Submit
