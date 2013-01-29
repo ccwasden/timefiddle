@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Event Creation Mockup</title>
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+	</head>
+	<body>
+		<div class="main-wrapper">
+			<div id="header">
+				<a id="logo" href="#" title="TimeFiddle">Some Cool Logo</a>
+				<ul>
+					<li><a href="home-page-mockup.html">TimeFiddle</a></li>
+					<li><a href="#">About</a></li>
+					<li class="active big">
+						<a href="mockup-create.html" class="create-event">Create Event</a>
+					</li>
+					<li><a href="#">Login</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="content">
+			<div class="event-creation">
+				<div class="main-wrapper">
+					<h1 class="center no-margin">
+						<text>Event</text> <strong>Creation</strong>
+					</h1>
+				</div>
+				<div class="event-creation-block">
+					<div class="steps active">
+						<img src="images/one.png" />
+					</div>
+					<div id="event-info" class="creation-block">
+						<h3 class="event">Describe your event</h3>
+						<strong>Name</strong><br>
+						<input type="text" name="event-name" class="event-inputs" cols="30" /><br><br>
+						<strong>Description</strong><br>
+						<textarea name="event-description" class="event-inputs" rows="6"></textarea>
+					</div>
+				</div>
+				<div class="event-creation-block">
+					<div class="steps inactive">
+						<img src="images/two.png" />
+					</div>
+					<div id="time-selection" class="creation-block">
+						<h3 class="event">Select possible times</h3>
+						<br>
+					</div>
+					<div class="event-time-selection-block">
+						<div class="month">
+							<span class="month-name">January 2013</span>
+							<span class="month-arrows"><a href="#">&#9668;</a><a href="#">&#9658;</a></span>
+						</div>
+						<div class="calendar">
+							<div class="calendar-header">
+								<div class="days">
+									<ul class="day-boxes">
+										<li class="inactive-day">30</li>
+										<li class="inactive-day">31</li>
+										<li class="inactive-day">1</li>
+										<li class="inactive-day">2</li>
+										<li class="inactive-day">3</li>
+										<li class="inactive-day">4</li>
+										<li class="inactive-day">5</li>
+										<li class="inactive-day">6</li>
+										<li class="active-day">7</li>
+										<li class="active-day">8</li>
+										<li class="active-day">9</li>
+										<li class="active-day">10</li>
+										<li class="active-day">11</li>
+										<li class="active-day">12</li>
+									</ul>
+								</div>
+							</div>
+							<div class="calendar-selection">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="event-creation-block">
+					<div class="steps inactive">
+						<img src="images/three.png" />
+					</div>
+					<div id="attendee-selection" class="creation-block">
+						<h3 class="event">Select attendees</h3>
+						<br>
+						<div class="add-friends">
+							<div>
+								<div class="social-links">
+									<a href="#" class="facebook"><img src="images/facebook-link.png" /></a>
+									<a href="#" class="google-plus"><img src="images/google-plus-link.png" /></a>
+									<a href="#" class="email"><img src="images/mail-link.png" /></a>
+								</div>
+								<textarea name="event-attendees" class="event-inputs" rows="6">Comma separated emails, or use a button above...</textarea>
+							</div>
+						</div>
+						<div class="send-link-options">
+							<span><input type="radio" name="account-options" />Create an account<a href="#" class="why">why?</a></span><br>
+							<span><input type="radio" name="account-options" />Give me a link to this event</span><br>
+						</div>
+						<input type="button" name="send" value="Send" class="send-button">
+					</div>
+				</div>
+				<div class="event-creation-done">
+					<div class="event-done">Done</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer" class="center main-wrapper">
+			<div class="seperator margin-bottom">
+				<hr>
+			</div>
+			<ul>
+				<li>
+					<a href="#">Download for Mobile</a>
+				</li>
+				<li>
+					<a href="#">Privacy Policy</a>
+				</li>
+				<li>
+					<a href="#">Support</a>
+				</li>
+				<li>
+					<a href="#">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
+
+
+
+<script type="text/javascript">
+
+// Page Load //
+$(function(){
+
+	$(".event-creation-block").each(function(idx){
+		$(this).css("opacity", idx == 0 ? "1" : ".5");
+	});
+
+	$(".event-creation-done").css("opacity",".5");
+
+});
+
+$(".event-inputs").focus(function(e){
+
+
+});
+
+$(".event-creation-block").hover(function(e){
+
+	$(".event-creation-block").css("opacity",".5");
+	$(".event-creation-block").find(".steps").removeClass("active").addClass("inactive");
+	$(this).find(".steps").removeClass("inactive");
+	$(this).find(".steps").addClass("active");
+	//$(this).fadeTo("fast","1");
+	$(this).css("opacity","1");
+	$(".event-creation-done").css("opacity",".5");
+	$(".event-creation-done").css("border", "2px solid grey");
+
+});
+
+$(".send-button").hover(function(e){
+
+	$(".event-creation-done").css("opacity","1");
+	$(".event-creation-done").css("border", "2px solid #1C86EE");
+
+
+	// var bColor = $(".event-creation-done").css("background-color");
+	// var tColor = $(".event-creation-done").css("color");
+
+	// console.log(tColor);
+
+	// $(".event-done").hide("fast",function(e){
+	// 	$(".event-creation-done").css("background-color", bColor == "rgb(255, 255, 255)" ? "#1C86EE" : "white");
+	// 	$(".event-creation-done").css("border", bColor == "rgb(255, 255, 255)" ? "2px solid #1C86EE" : "2px solid grey");
+	// 	$(".event-creation-done").css("color", tColor == "rgb(128, 128, 128)" ? "white" : "grey");
+	// 	$(".event-done").show("fast");
+	// });
+	
+
+});
+
+$(".event-inputs").focus(function(e){
+
+	var inputsHTML = $(this).html();
+
+	if(inputsHTML.length > 0) {
+		$(this).caretToStart();
+	}
+
+});
+
+</script>

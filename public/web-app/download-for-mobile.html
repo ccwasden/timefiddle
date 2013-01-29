@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Home Page Mockup</title>
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+	</head>
+	<body>
+		<div class="main-wrapper">
+			<div id="header">
+				<a id="logo" href="#" title="TimeFiddle">Some Cool Logo</a>
+				<ul>
+					<li class="active big">
+						<a href="home-page-mockup.html">TimeFiddle</a>
+					</li>
+					<li><a href="#">About</a></li>
+					<li>
+						<a href="mockup-create.html" class="create-event">Create Event</a>
+					</li>
+					<li><a href="#">Login</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="content">
+			
+			<h1>
+				<text>Download</text> <strong>TimeFiddle</strong>
+				
+			</h1>
+
+		</div>
+		<div id="footer" class="center main-wrapper">
+			<div class="seperator margin-bottom">
+				<hr>
+			</div>
+			<ul>
+				<li>
+					<a href="#">Download for Mobile</a>
+				</li>
+				<li>
+					<a href="#">Privacy Policy</a>
+				</li>
+				<li>
+					<a href="#">Support</a>
+				</li>
+				<li>
+					<a href="#">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>
+
+<style type="text/css">
+
+
+
+</style>
+
+<script type="text/javascript">
+
+	var navbarLinks = $("#header").find("li");
+
+	navbarLinks.click(function(e){
+		navbarLinks.removeClass("active");
+		$(this).addClass("active big");
+	});
+
+</script>
