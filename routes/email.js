@@ -27,8 +27,7 @@ exports.send = function(req, res) {
         var smtpTransport = nodemailer.createTransport("SMTP",{
             service: "Gmail",
             auth: {
-                user: "raceonapp@gmail.com",
-                pass: "brittandmeg"
+                //Insert your gmail info here
             }
         });
 
@@ -39,12 +38,12 @@ exports.send = function(req, res) {
             var renderedEmail = render({name:name, eventDate: eventDate, style:emailStyle});
 
             var mailOptions = {
-                from: "Will Highland <raceonapp@gmail.com>", // sender address
+                from: "%INSERT SENDER HERE%", // sender address
                 to: userEmail, // list of receivers
                 subject: "Event Created!", // Subject line
                 text: "Hello world", // plaintext body
                 html: renderedEmail // html body
-            }
+            };
 
             // send mail with defined transport object
             smtpTransport.sendMail(mailOptions, function(error, response){
