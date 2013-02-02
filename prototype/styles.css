@@ -1,0 +1,201 @@
+/*````````````````````````````````````````````````````````````````````````````````````````````````````````````*/
+/*											Begin Neutralizing CSS											  */
+/*............................................................................................................*/
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {margin:0;padding:0;}
+table {border-spacing:0; width: 100%;} fieldset,img {border:0;} address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;}
+ol,ul {list-style:none;} caption,th {text-align:left;} h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal;}
+q:before,q:after {content:'';} abbr,acronym { border:0;}
+
+/*````````````````````````````````````````````````````````````````````````````````````````````````````````````*/
+/* 											End Neutralizing CSS 											  */
+/*............................................................................................................*/
+
+::selection{ background-color: #70A0AF; color: white; }
+::moz-selection{ background-color: #70A0AF; color: white; }
+::webkit-selection{ background-color: #70A0AF; color: white; }
+
+li {list-style-type: none; display: inline-block;}
+
+body {
+	width: 100%; 
+	font: 13px/20px normal Helvetica, Arial, sans-serif;
+	color: #999;
+	height: 100%;
+	background: #ccc;
+}
+
+a {
+	color: #70A0AF;
+	background-color: transparent;
+	font-weight: normal;
+	text-decoration: none;
+}
+a:hover {
+    text-decoration:underline;    
+}
+
+h1, h2, h3 {
+	font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    font-size:1.5em; 
+    padding:0 12px;
+    line-height:1.7em;   
+    color: #222;
+}
+
+h2 {
+    font-size:1.3em;
+    color:#333;
+}
+
+h3 {
+    font-size:1.1em;
+    color:#444;
+}
+
+*[href]{
+    cursor:pointer;    
+}
+
+.container {
+    width:350px;
+    margin:0 auto;
+    background:white;
+    padding: 0 0;
+}
+
+.eventList {padding-bottom:10px;}
+.eventList .section {
+    margin:5px 10px;
+}
+
+.eventList h2 {
+    padding:12px 0 0;    
+}
+
+.eventList .section ol {
+    background: #f6f6f6;
+    border-radius:3px;
+    border: 1px solid #ddd;
+    margin:5px 0;
+}
+
+.eventList .scheduled {
+    float:right;
+    background: url(green-check.png) no-repeat right center;
+    line-height: 43px;
+    padding: 0 33px 0 0;
+    color: #6aaf6a;
+}
+
+.eventList .section li {
+    display:block;    
+    border-bottom: 1px solid #ddd;
+    padding:5px;
+}
+.eventList .section li:last-child {
+    border-bottom:none;
+}
+
+.bar { clear:both; overflow:hidden; }
+.timeList { padding:0 12px 12px; background:#ddd; }
+
+.timeList li { display:block; background:white; }
+.timeList .dateLabel {
+    background:#aaa;
+    display:block; 
+    color:white; 
+    padding:2px 5px;  
+}
+
+.timeList .range {
+    overflow-x: scroll;
+}
+
+.timeList .range .horizontal {
+    width:700px;
+}
+
+.times div {
+    display:inline-block;
+    width:48px;
+    text-align:center;
+    background:url(timelines.png) no-repeat bottom center;
+    border-bottom:1px solid #ccc;
+    line-height: 45px;
+       
+    vertical-align: top;
+    height: 37px;
+}
+
+.timeList .selection {
+    height: 23px;    
+    padding: 8px 0;
+    position:relative;
+}
+
+.timeList .selection div {
+    background: #72BE79;
+    height: 23px;
+    margin: 0;
+    opacity:.4;
+    position:absolute;
+}
+
+.timeList .sel1 {
+    width:21%;
+    left:17%;
+}
+
+.timeList .sel2 {
+    width: 36%;
+    left: 31%;
+}
+
+.timeList .sel3 {
+    width:35%;
+    left:10%;
+}
+
+.timeList .sel4 {
+    width:12%;
+    left:22%;
+}
+.timeList .sel5 {
+    width:21%;
+    left:3%;
+}
+
+.s1 { }
+
+.modes { margin:8px 0; }
+.modes div:first-child { border-right:none; }
+.modes div {
+    box-sizing:border-box;
+    text-align:center;
+    border:1px solid #555;
+    background:#999;
+    display:inline-block;
+    line-height:32px;
+    padding:0 14px;
+    color:white;
+}
+.modes div.selected{ background:#888; box-shadow:rgba(0,0,0,.3) 0 1px 8px inset; }
+.header { background: #72BE79; color:white; line-height:32px; padding:0 12px; }
+
+.details {
+    padding:12px;
+}
+
+.selectedTime {
+    background:#eee;
+    border:1px solid #ddd;
+    text-align:center;
+    padding:5px 0;    
+    color:#bbb;
+    margin:5px 0 0;
+}
+
