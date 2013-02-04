@@ -32,6 +32,9 @@ body {
 .clearfix {
 	clear:both;
 }
+.hidden {
+	display:none !important;
+}
 
 .margin-bottom {
 	margin-bottom:10px;
@@ -434,4 +437,106 @@ a.facebook:focus, a.google-plus:focus, a.email:focus {
 }
 
 /***END EVENT CREATION ***/
+
+
+
+/***DOWNLOAD FOR MOBILE ***/
+
+.mobile-download {
+
+}
+
+.mobile-download {
+	margin:40px 0px 20px 0px ;
+}
+
+.button {
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	display:inline-block;
+	cursor:pointer;
+	padding:12px 40px;
+	font-size:28px;
+	font-weight:700;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+	background-color:#00688B;
+	-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.3),inset 0 1px rgba(255,255,255,0.25);
+	box-shadow:0 1px 2px rgba(0,0,0,0.3),inset 0 1px rgba(255,255,255,0.25);
+	border:solid 1px #2473b0;
+	border-bottom:1px solid #20608f;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #00688B), color-stop(1, #237bbd));
+	background:-webkit-linear-gradient(top, #00688B 0%, #237bbd 100%);
+	background:-moz-linear-gradient(top, #00688B 0%, #237bbd 100%);
+	background:-o-linear-gradient(top, #00688B 0%, #237bbd 100%);
+	background:-ms-linear-gradient(top, #00688B 0%, #237bbd 100%);
+	background:linear-gradient(top, #00688B 0%, #237bbd 100%);
+	color:#fff;
+	text-shadow:0 1px 1px rgba(0,0,0,0.4);
+}
+
+.button:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #51adf5), color-stop(1, #2a86cb));
+	background:-webkit-linear-gradient(top, #237bbd 0%, #2a86cb 100%);
+	background:-moz-linear-gradient(top, #237bbd 0%, #2a86cb 100%);
+	background:-o-linear-gradient(top, #237bbd 0%, #2a86cb 100%);
+	background:-ms-linear-gradient(top, #237bbd 0%, #2a86cb 100%);
+	background:linear-gradient(top, #237bbd 0%, #2a86cb 100%)
+}
+
+.button:active {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0, #237bbd), color-stop(1, #2a99ef));
+	background:-webkit-linear-gradient(top, #00688B 0%, #2a99ef 100%);
+	background:-moz-linear-gradient(top, #00688B 0%, #2a99ef 100%);
+	background:-o-linear-gradient(top, #00688B 0%, #2a99ef 100%);
+	background:-ms-linear-gradient(top, #00688B 0%, #2a99ef 100%);
+	background:linear-gradient(top, #00688B 0%, #2a99ef 100%);
+	-webkit-box-shadow:0 1px 0 #fff,inset 0 0 25px rgba(0,0,0,0.2);
+	box-shadow:0 1px 0 #fff,inset 0 0 25px rgba(0,0,0,0.2);
+}
+
+.mobile-download img {
+	max-height:400px;
+	margin:5px;
+}
+
+.download-button, .download-iphone, .download-android, .download-windows-phone {
+	position:relative;
+	height:70px;
+	padding:0 20px;
+	margin-bottom:10px;
+	vertical-align:middle;
+	-webkit-tap-highlight-color:transparent;
+}
+
+.download-android span{
+	background-position:center 12px;
+	width:203px;
+	background-image:url("../images/button-android.png")}
+
+.download-iphone span {
+	width:154px;
+	background-image:url("../images/button-appstore.png");
+}
+
+.download-windows-phone span {
+	width:160px;
+	background-image:url("../images/windows7-download.png");
+}
+
+.download-button span, .download-iphone span, .download-android span,
+.download-android span, .download-windows-phone span{
+	height:100%;
+	display:inline-block;
+	text-indent:-9876px;
+	background-position:center;
+	background-repeat:no-repeat;
+	-webkit-background-size:100%;
+	-moz-background-size:100%;
+	background-size:100%
+}
+
+/***END DOWNLOAD FOR MOBILE ***/
 

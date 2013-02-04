@@ -25,11 +25,46 @@
 		</div>
 		<div id="content">
 			
-			<h1>
+			<h1 class="center no-margin">
 				<text>Download</text> <strong>TimeFiddle</strong>
-				
 			</h1>
+			<h2 class="center no-margin">
+				<text>Get it for your 
+					<span class="iPhone-agent hidden">iPhone</span>
+					<span class="iPad-agent hidden">iPad</span>
+					<span class="android-agent hidden">Android</span>
+					<span class="windows-phone-agent hidden">Windows Phone</span>
+					<span class="other-agent hidden">Mobile Device</span>
+				</text>
 
+			</h2>
+
+			<div class="center mobile-download" style="clear:both">
+				<img src="images/iphonetimefiddle.png" />
+			</div>
+			<div class="center">
+				<a class="iPhone-agent download-iphone button hidden" href="#">
+					<span>Available on the App Store</span>
+				</a>
+				<a class="iPad-agent download-iphone button hidden" href="#">
+					<span>Available on the App Store</span>
+				</a>
+				<a class="android-agent download-android button hidden" href="#">
+					<span>Download for Android</span>
+				</a>
+				<a class="other-agent download-iphone button hidden" href="#">
+					<span>Available on the App Store</span>
+				</a>
+				<a class="windows-phone-agent download-windows-phone button hidden" href="#">
+					<span>For Windows Phone 7</span>
+				</a>
+				<p>
+					<text>Also available on</text>
+					<a href="#">Android</a><text>, </text>
+					<a href="#">Windows Phone</a><text>, and</text>
+					<a href="#">Web</a>
+				</p>
+			</div>
 		</div>
 		<div id="footer" class="center main-wrapper">
 			<div class="seperator margin-bottom">
@@ -37,7 +72,7 @@
 			</div>
 			<ul>
 				<li>
-					<a href="#">Download for Mobile</a>
+					<a href="#" class="active">Download for Mobile</a>
 				</li>
 				<li>
 					<a href="#">Privacy Policy</a>
@@ -61,11 +96,36 @@
 
 <script type="text/javascript">
 
+	$(function(e){
+
+		if(navigator.userAgent.match(/iPhone/i)) {
+			$(".iPhone-agent").removeClass("hidden");
+		} 
+ 		else if(navigator.userAgent.match(/iPod/i)) {
+ 			$(".iPhone-agent").removeClass("hidden");
+ 		}
+ 		else if(navigator.userAgent.match(/iPad/i)) {
+ 			$(".iPad-agent").removeClass("hidden");
+ 		}
+ 		else if(navigator.userAgent.match(/Android/i)) {
+ 			$(".android-agent").removeClass("hidden");
+ 		}
+ 		else if(navigator.userAgent.match(/Windows Phone/i)) {
+ 			$(".windows-phone-agent").removeClass("hidden");
+ 		} else {
+ 			$(".other-agent").removeClass("hidden");
+ 		}
+
+		console.log(navigator.userAgent);
+
+	});
+
 	var navbarLinks = $("#header").find("li");
 
 	navbarLinks.click(function(e){
 		navbarLinks.removeClass("active");
 		$(this).addClass("active big");
 	});
+
 
 </script>
