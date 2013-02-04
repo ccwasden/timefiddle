@@ -197,7 +197,7 @@ ul, p {
 #footer ul li a {
 	color:#b6b5b5;
 }
-#footer ul li a:hover {
+#footer ul li a:hover, #footer ul li.active a {
 	color:#00688B;
 }
 
@@ -502,7 +502,7 @@ a.facebook:focus, a.google-plus:focus, a.email:focus {
 	margin:5px;
 }
 
-.download-button, .download-iphone, .download-android, .download-windows-phone {
+.download-button, .download-iphone, .download-android, .download-windows-phone, .create-event-button {
 	position:relative;
 	height:70px;
 	padding:0 20px;
@@ -523,7 +523,7 @@ a.facebook:focus, a.google-plus:focus, a.email:focus {
 
 .download-windows-phone span {
 	width:160px;
-	background-image:url("../images/windows7-download.png");
+	background-image:url("../images/for-windows7-download.png");
 }
 
 .download-button span, .download-iphone span, .download-android span,
@@ -536,6 +536,22 @@ a.facebook:focus, a.google-plus:focus, a.email:focus {
 	-webkit-background-size:100%;
 	-moz-background-size:100%;
 	background-size:100%
+}
+
+.create-event-button {
+	margin:30px 0 30px 0;
+}
+
+.create-event-button span {
+	width:150px
+	height:100%;
+	display:inline-block;
+	background-position:center;
+	background-repeat:no-repeat;
+	-webkit-background-size:100%;
+	-moz-background-size:100%;
+	background-size:100%;
+	margin-top:17px;
 }
 
 /***END DOWNLOAD FOR MOBILE ***/
