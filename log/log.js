@@ -1,34 +1,27 @@
 /**
- *    Simple log for all server interactions. Very simple right now but can be extended in the future.
- *     Some ideas: save some information in the database to make it searchable, custom logs for different servers.
- *
- *
+ *    Simple log for all server interactions.
+ *    A copy of all log messages are saved into the database for easier accessibility and searching.
+ *    The different levels of logging serve to simplify the search and provide a easy level of abstraction.
  */
 
 var db = require("../database/database");
-var ERROR = "ERROR";
-var DEBUG = "DEBUG";
-var INFO = "INFO";
-var VERBOSE = "VERBOSE";
+var saveToDatabase = false;
 
 /**
  * Simple method that prints out the given method to the console and saves a copy of it to the database
  *
  * @param message The message to log
- * @param status One of the status codes defined in this file. Defaults to INFO
  */
-function log(message, status) {
+function log(message) {
     var d = new Date();
     var date = d.toDateString() + " " + d.toLocaleTimeString() + " ";
 
-    if(!status) {
-        status = INFO;
-    }
-
     if (typeof message === 'string') {
         console.log(date + message);
-        var dbLog = {"date":date, "message":message};
-        db.saveLog(dbLog);
+        if(saveToDatabase) {
+            var dbLog = {"date":date, "message":message};
+            db.saveLog(dbLog);
+        }
     }
     else {
         console.log(date + "Invalid log message");
@@ -36,19 +29,46 @@ function log(message, status) {
 }
 
 /**
- * Simply prints out the given message to the console.
- * @param message
- * @param status
+ * Simple initialization function used to set up the logger.
+ * @param app
  */
-function logWithoutDB(message, status) {
-    var d = new Date();
-    var date = d.toDateString() + " " + d.toLocaleTimeString() + " ";
-    console.log(date + message);
-}
+exports.init = function(app) {
+    if(app.dev) {
+        saveToDatabase = false;
+    } else if(app.prod) {
+        saveToDatabase = true;
+    }
+    //Any other initialization can happen here
+};
 
-exports.log = log;
-exports.logWithoutDB = logWithoutDB;
-exports.ERROR = ERROR;
-exports.DEBUG = DEBUG;
-exports.INFO = INFO;
-exports.VERBOSE = VERBOSE;
+/**
+ * Log messages at the DEBUG level
+ * @param message
+ */
+exports.debug = function(message) {
+    log("DEBUG " + message);
+};
+
+/**
+ * Log messages at the INFO level
+ * @param message
+ */
+exports.info = function(message) {
+    log("INFO " + message);
+};
+
+/**
+ * Log messages at the WARNING level
+ * @param message
+ */
+exports.warn = function(message) {
+    log("WARNING " + message);
+};
+
+/**
+ * Log messages at the ERROR level
+ * @param message
+ */
+exports.error = function(message) {
+    log("ERROR " + message);
+};

@@ -4,5 +4,6 @@
  */
 
 exports.index = function(req, res){
-  res.render('index', { title: 'TimeFiddle' });
+  res.sendfile('./public/home-page-mockup.html');
+//  res.render('index', { title: 'TimeFiddle' });
 };
