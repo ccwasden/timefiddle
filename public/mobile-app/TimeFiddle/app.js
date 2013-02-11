@@ -1,20 +1,29 @@
 //<debug>
 Ext.Loader.setPath({
     'Ext': 'touch/src',
+    'Ext.ux': 'ux',
     'TimeFiddle': 'app'
 });
 //</debug>
 
 Ext.application({
-    controllers: ["Main"],
+    controllers: [
+    	"LandingController",
+    	"LoginController"
+    ],
 
     name: 'TimeFiddle',
 
     requires: [
-        'Ext.MessageBox'
+        'TimeFiddle.view.Nav'
     ],
 
-    views: ['Main'],
+    views: [
+    	'LandingView',
+    	'LoginView',
+    	'SignupView',
+    	'Main'
+    ],
 
     icon: {
         '57': 'resources/icons/Icon.png',
@@ -39,7 +48,7 @@ Ext.application({
         Ext.fly('appLoadingIndicator').destroy();
 
         // Initialize the main view
-        nav = Ext.create('TimeFiddle.view.Main');
+        nav = Ext.create('TimeFiddle.view.Nav', {fullscreen: true});
         Ext.Viewport.add(nav);
     },
 
