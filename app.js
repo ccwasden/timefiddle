@@ -7,6 +7,7 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var email = require('./routes/email');
 var event = require('./routes/event');
+var mobile = require('./routes/mobile');
 var http = require('http');
 var path = require('path');
 
@@ -35,7 +36,8 @@ app.configure('development', function () {
 app.get('/', routes.index);
 app.get('/users', user.list);
 app.post('/sendEmail', email.send);
-app.get('/createEvent', event.create);
+app.get('/create', event.create);
+app.get('/download', mobile.download);
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log("Express server listening on port " + app.get('port'));

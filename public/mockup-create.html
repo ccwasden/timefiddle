@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<title>Event Creation Mockup</title>
-		<script type="text/javascript" src="jquery.min.js"></script>
+		<script type="text/javascript" src="javascripts/jquery.min.js"></script>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
 	</head>
@@ -12,10 +12,12 @@
 			<div id="header">
 				<a id="logo" href="#" title="TimeFiddle">Some Cool Logo</a>
 				<ul>
-					<li><a href="home-page-mockup.html">TimeFiddle</a></li>
+					<li>
+						<a href="/">TimeFiddle</a>
+					</li>
 					<li><a href="#">About</a></li>
-					<li class="active big">
-						<a href="mockup-create.html" class="create-event">Create Event</a>
+					<li class="active">
+						<a href="/create" class="create-event">Create Event</a>
 					</li>
 					<li><a href="#">Login</a></li>
 				</ul>
@@ -29,8 +31,8 @@
 					</h1>
 				</div>
 				<div class="event-creation-block">
-					<div class="steps active">
-						<img src="images/one.png" />
+					<div class="steps">
+						1
 					</div>
 					<div id="event-info" class="creation-block">
 						<h3 class="event">Describe your event</h3>
@@ -41,8 +43,8 @@
 					</div>
 				</div>
 				<div class="event-creation-block">
-					<div class="steps inactive">
-						<img src="images/two.png" />
+					<div class="steps">
+						2
 					</div>
 					<div id="time-selection" class="creation-block">
 						<h3 class="event">Select possible times</h3>
@@ -50,38 +52,77 @@
 					</div>
 					<div class="event-time-selection-block">
 						<div class="month">
-							<span class="month-name">January 2013</span>
-							<span class="month-arrows"><a href="#">&#9668;</a><a href="#">&#9658;</a></span>
+							
 						</div>
 						<div class="calendar">
-							<div class="calendar-header">
-								<div class="days">
-									<ul class="day-boxes">
-										<li class="inactive-day">30</li>
-										<li class="inactive-day">31</li>
-										<li class="inactive-day">1</li>
-										<li class="inactive-day">2</li>
-										<li class="inactive-day">3</li>
-										<li class="inactive-day">4</li>
-										<li class="inactive-day">5</li>
-										<li class="inactive-day">6</li>
-										<li class="active-day">7</li>
-										<li class="active-day">8</li>
-										<li class="active-day">9</li>
-										<li class="active-day">10</li>
-										<li class="active-day">11</li>
-										<li class="active-day">12</li>
-									</ul>
-								</div>
-							</div>
-							<div class="calendar-selection">
-							</div>
+							<table>
+								<tbody>
+									<tr>
+										<td>
+											<span class="month-name">January 2013</span>
+										</td>
+										<td>
+											<span class="month-arrows"><a href="#">&#9668;</a><a href="#">&#9658;</a></span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<table>
+								<tbody>
+									<tr class="week-row">
+										<td>30</td>
+										<td>1</td>
+										<td>2</td>
+										<td>3</td>
+										<td>4</td>
+										<td>5</td>
+										<td>6</td>
+									</tr>
+									<tr class="week-row">
+										<td>30</td>
+										<td>1</td>
+										<td>2</td>
+										<td>3</td>
+										<td>4</td>
+										<td>5</td>
+										<td>6</td>
+									</tr>
+									<tr class="week-row">
+										<td>30</td>
+										<td>1</td>
+										<td>2</td>
+										<td>3</td>
+										<td>4</td>
+										<td>5</td>
+										<td>6</td>
+									</tr>
+									<tr class="week-row">
+										<td>30</td>
+										<td>1</td>
+										<td>2</td>
+										<td>3</td>
+										<td>4</td>
+										<td>5</td>
+										<td>6</td>
+									</tr>
+									<tr class="week-row">
+										<td>30</td>
+										<td>1</td>
+										<td>2</td>
+										<td>3</td>
+										<td>4</td>
+										<td>5</td>
+										<td>6</td>
+									</tr>
+								</tbody>
+							</table>
+
 						</div>
 					</div>
 				</div>
 				<div class="event-creation-block">
-					<div class="steps inactive">
-						<img src="images/three.png" />
+					<div class="steps">
+						3
 					</div>
 					<div id="attendee-selection" class="creation-block">
 						<h3 class="event">Select attendees</h3>
@@ -103,9 +144,6 @@
 						<input type="button" name="send" value="Send" class="send-button">
 					</div>
 				</div>
-				<div class="event-creation-done">
-					<div class="event-done">Done</div>
-				</div>
 			</div>
 		</div>
 		<div id="footer" class="center main-wrapper">
@@ -114,7 +152,7 @@
 			</div>
 			<ul>
 				<li>
-					<a href="#">Download for Mobile</a>
+					<a href="/download">Download for Mobile</a>
 				</li>
 				<li>
 					<a href="#">Privacy Policy</a>
@@ -134,6 +172,7 @@
 
 <script type="text/javascript">
 
+/*
 // Page Load //
 $(function(){
 
@@ -193,5 +232,5 @@ $(".event-inputs").focus(function(e){
 	}
 
 });
-
+*/
 </script>
