@@ -8,8 +8,10 @@ var user = require('./routes/user');
 var email = require('./routes/email');
 var event = require('./routes/event');
 var mobile = require('./routes/mobile');
+var login = require('./routes/login');
 var http = require('http');
 var path = require('path');
+
 
 var app = express();
 
@@ -38,6 +40,7 @@ app.get('/users', user.list);
 app.post('/sendEmail', email.send);
 app.get('/create', event.create);
 app.get('/download', mobile.download);
+app.get('/login', login.index);
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log("Express server listening on port " + app.get('port'));
