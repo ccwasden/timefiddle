@@ -29,14 +29,27 @@ app.configure(function () {
     app.set('view engine', 'jade');
     app.set('views', __dirname + '/views');
 
-    //Set up subdomains
-    app.use(express.vhost('m.timefiddle.com', require('./public/mobile-app/TimeFiddle/build/TimeFiddle/production').app))
-        .use(express.vhost('mobile.timefiddle.com', require('./public/mobile-app/TimeFiddle/build/TimeFiddle/production').app))
-        .listen(80)});
+    /*
+        app.use(express.vhost('m.timefiddle.com', require('./public/mobile-app/TimeFiddle/build/TimeFiddle/production')))
+            .use(express.vhost('mobile.timefiddle.com', require('./public/mobile-app/TimeFiddle/build/TimeFiddle/production')))
+            .listen(3000)});
+    */
+});
 
-//Change to production upon launch
+//Development settings
 app.configure('development', function () {
     app.locals.log = require('./log/log.js').init('development');
+});
+
+//Production settings
+app.configure('production', function () {
+    //Set up subdomains
+    app.get('*', function(req, res, next){
+        if(req.headers.host == 'm.timefiddle.com' || req.headers.host == 'mobile.timefiddle.com') {
+            req.url = '/mobile-app/TimeFiddle/build/TimeFiddle/production' + req.url;
+        }
+        next();
+    });
 });
 
 //Define routes for the app. Basically creating a mapping between URLs and functions
