@@ -32,9 +32,8 @@ Ext.define('TimeFiddle.view.SignupView', {
             {
 				xtype: 'button',
 				text: 'Submit',
-				cls: 'btn',
+				cls: 'btn blueBtn',
 				action: 'login',
-				ui: 'blueBtn',
 				style: 'margin-top: 40px'
 			}
         ]

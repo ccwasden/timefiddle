@@ -1,27 +1,77 @@
-/*
-.x-form, .x-scroll-container {
-	background-color: #FFF !important;
+body {
+	font-family: "Myriad Pro", Arial, Helvetica, Tahoma, sans-serif;
 }
-*/
 
+/* ------------------------------------ BUTTONS ----------------------------------------*/
 .btn {
-	height: 40px;
-	width: 300px;
-	position: absolute;
-	margin-left: -150px;
-	left: 50%;
-	margin-top: -20px;
-	box-shadow: 0px 1px 4px #999;
-	text-shadow: rgba(255, 255, 255, .6) 0 1px 1px;
+	height: 45px;
+	width: 90%;
+	max-width: 400px;
+	text-shadow: none !important;
+	background-image: none !important;
+	border: none !important;
+	margin: 5px;
 }
 
-.x-button-blueBtn {
-	text-shadow: rgba(0,0,0, .7) 0 -1px 1px;
+.btn .x-button-label {
+	letter-spacing: 1px;
+}
+
+.blueBtn {
+	background-color: #0071bc !important;
+}
+
+.grayBtn {
+	background-color: #ccc !important;
+}
+
+.whiteBtn {
+	background-color: #fff !important;
+}
+
+.blueBtn .x-button-label,
+.grayBtn .x-button-label {
+	color: #fff !important;
+}
+
+.whiteBtn .x-button-label {
+	color: #0071bc !important;
 }
 
 .x-button-label {
+	text-shadow: none !important;
 	font-weight: normal !important;
 	font-family: "Myriad Pro", Arial, Helvetica, Tahoma, sans-serif;
+}
+
+/* ------------------------------------ BUTTON ICONS -------------------------------------*/
+.textLeft .x-button-label {
+	text-align: left !important;
+}
+
+.backBtn {
+	border: none !important;
+	background: none !important;
+	padding: 0px;
+}
+
+.backBtn .x-button-icon {
+	display: block !important;
+	background: url(../images/back.png) no-repeat 6px 6px !important;
+}
+
+.backBtn + .navTitle {
+	padding-right: 38px;
+}
+
+
+
+.whiteBG {
+	background-color: #fff !important;
+}
+
+.grayBG {
+	background-color: #e6e7e8 !important;
 }
 
 .welcomeLbl {
@@ -31,8 +81,25 @@
 	font-family: "Myriad Pro", Arial, Helvetica, Tahoma, sans-serif;
 	letter-spacing: -2px;
 	line-height: 95%;
+	margin-top: 40px;
 }
 
 .welcomeLbl strong {
 	color: #00688B;
+}
+
+.navBar {
+	height: 50px;
+	padding: 10px;
+}
+
+.navBar .navTitle {
+	text-align: -webkit-center;
+	color: #555;
+}
+
+.noPadding,
+.noPadding .x-inner,
+.noPadding .x-form-inner {
+	padding: 0px !important;
 }

@@ -14,31 +14,32 @@ Ext.define('TimeFiddle.view.LandingView', {
         navigationBar: {
 			hidden: true
 		},
+		layout : {
+			type  : 'vbox',
+			pack  : 'center',
+			align : 'middle'
+		},
+		padding: '20px',
         items: [
-			{
-				xtype: 'spacer',
-				width: '100%',
-				height: '15%'
-			},
 			{
 				xtype: 'label',
 				html: 'Welcome to<br/><strong>TimeFiddle</strong>',
 				cls: 'welcomeLbl'
 			},
 			{
+				xtype: 'spacer'
+			},
+			{
 				xtype: 'button',
 				text: 'Log In',
-				cls: 'btn',
-				action: 'login',
-				bottom: '90px'
+				cls: 'btn grayBtn',
+				action: 'login'
 			},
 			{
 				xtype: 'button',
 				text: 'Sign Up',
-				cls: 'btn',
-				action: 'signup',
-				ui: 'blueBtn',
-				bottom: '40px'
+				cls: 'btn blueBtn',
+				action: 'signup'
 			}
         ]
     }

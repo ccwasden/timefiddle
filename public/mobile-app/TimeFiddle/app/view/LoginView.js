@@ -10,9 +10,16 @@ Ext.define('TimeFiddle.view.LoginView', {
     ],
     
     config: {
+    	layout : {
+			type  : 'vbox',
+			pack  : 'center',
+			align : 'middle'
+		},
+		
         items: [
             {
                 xtype: 'fieldset',
+                width: '90%',
                 maxWidth: '400px',
                 items: [
                     {
@@ -32,9 +39,8 @@ Ext.define('TimeFiddle.view.LoginView', {
             {
 				xtype: 'button',
 				text: 'Log In',
-				cls: 'btn',
+				cls: 'btn blueBtn',
 				action: 'login',
-				ui: 'blueBtn',
 				style: 'margin-top: 40px'
 			}
         ]

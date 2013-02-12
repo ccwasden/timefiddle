@@ -12,7 +12,7 @@ Ext.define('TimeFiddle.controller.LoginController', {
     login: function(button, e, options) {
         //Authenticate here
         button.up('navigationview').push({
-            xtype: 'mainView'
+            xtype: 'detailsView'
         });
     }
 });

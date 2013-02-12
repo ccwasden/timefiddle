@@ -1,7 +1,6 @@
 //<debug>
 Ext.Loader.setPath({
     'Ext': 'touch/src',
-    'Ext.ux': 'ux',
     'TimeFiddle': 'app'
 });
 //</debug>
@@ -9,7 +8,8 @@ Ext.Loader.setPath({
 Ext.application({
     controllers: [
     	"LandingController",
-    	"LoginController"
+    	"LoginController",
+    	"DetailsViewController"
     ],
 
     name: 'TimeFiddle',
@@ -22,7 +22,7 @@ Ext.application({
     	'LandingView',
     	'LoginView',
     	'SignupView',
-    	'Main'
+    	'DetailsView'
     ],
 
     icon: {
