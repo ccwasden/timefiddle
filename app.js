@@ -7,6 +7,8 @@ var routes = require('./routes');
 var user = require('./routes/user');
 var email = require('./routes/email');
 var event = require('./routes/event');
+var login = require('./routes/login');
+var mobile = require('./routes/mobile');
 var http = require('http');
 var path = require('path');
 
@@ -55,7 +57,9 @@ app.configure('production', function () {
 //Define routes for the app. Basically creating a mapping between URLs and functions
 app.get('/', routes.index);
 app.get('/users', user.list);
-app.get('/createEvent', event.create);
+app.get('/create', event.create);
+app.get('/login', login.index);
+app.get('/download', mobile.download);
 
 app.post('/sendEmail', email.send);
 
