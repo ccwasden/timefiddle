@@ -33,9 +33,9 @@ function log(message) {
  * @param app
  */
 exports.init = function(app) {
-    if(app.dev) {
+    if(app === 'development') {
         saveToDatabase = false;
-    } else if(app.prod) {
+    } else if(app === 'production') {
         saveToDatabase = true;
     }
     //Any other initialization can happen here
