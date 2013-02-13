@@ -31,23 +31,33 @@ app.configure(function () {
     app.set('view engine', 'jade');
     app.set('views', __dirname + '/views');
 
-    /*
-        app.use(express.vhost('m.timefiddle.com', require('./public/mobile-app/TimeFiddle/build/TimeFiddle/production')))
-            .use(express.vhost('mobile.timefiddle.com', require('./public/mobile-app/TimeFiddle/build/TimeFiddle/production')))
-            .listen(3000)});
-    */
+    //Some helper code for working with Strings
+    if (typeof String.prototype.startsWith != 'function') {
+        String.prototype.startsWith = function (str){
+            return this.slice(0, str.length) == str;
+        };
+    }
 });
 
 //Development settings
 app.configure('development', function () {
     app.locals.log = require('./log/log.js').init('development');
+    //Set up subdomains
+    app.get('*', function(req, res, next){
+        var host = req.headers.host;
+        if(host.startsWith('m.localhost') || host.startsWith('mobile.localhost')) {
+            req.url = '/mobile-app/TimeFiddle/build/TimeFiddle/production' + req.url;
+        }
+        next();
+    });
 });
 
 //Production settings
 app.configure('production', function () {
     //Set up subdomains
     app.get('*', function(req, res, next){
-        if(req.headers.host == 'm.timefiddle.com' || req.headers.host == 'mobile.timefiddle.com') {
+        var host = req.headers.host;
+        if(host.startsWith('m.timefiddle') || host.startsWith('mobile.timefiddle')) {
             req.url = '/mobile-app/TimeFiddle/build/TimeFiddle/production' + req.url;
         }
         next();
