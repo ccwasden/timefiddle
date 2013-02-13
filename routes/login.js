@@ -1,5 +1,5 @@
 exports.index = function(req, res) {
 
-	res.sendfile("./public/login.html");
+	res.sendfile("./public/views/login.html");
 
 }

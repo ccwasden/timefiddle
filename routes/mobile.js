@@ -1,5 +1,5 @@
 exports.download = function(req, res){
   
-  	res.sendfile('./public/download-for-mobile.html');
+  	res.sendfile('./public/views/download-for-mobile.html');
   
 };

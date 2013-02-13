@@ -70,8 +70,10 @@ app.get('/users', user.list);
 app.get('/create', event.create);
 app.get('/login', login.index);
 app.get('/download', mobile.download);
-
 app.post('/sendEmail', email.send);
+app.get('*', function(req, res){
+    res.send('The page could not be found :)', 404);
+});
 
 
 http.createServer(app).listen(app.get('port'), function () {

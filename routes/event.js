@@ -1,5 +1,5 @@
 exports.create = function(req, res){
   
-  	res.sendfile('./public/mockup-create.html');
+  	res.sendfile('./public/views/mockup-create.html');
   
 };
