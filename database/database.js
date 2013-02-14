@@ -6,12 +6,12 @@
 
 var log = require("../log/log.js");
 var initialized = false;
-var mongo;
+var db;
 
 /**
  *    Database initialization function. MUST be called once before any other DB functions are called.
  */
-function init() {
+exports.init = function() {
     if(!initialized) {
         var mongoDriver = require("mongojs");
 
@@ -19,39 +19,50 @@ function init() {
         var collections = ["event", "log", "userinformation"];
 
         // Specify IP, Port, and db to connect to here
-        var connectionInfo = "127.0.0.1:27017/timeFiddle";
-        mongo = mongoDriver.connect(connectionInfo, collections);
+        var connectionInfo = "127.0.0.1:27017/timefiddle";
+        db = mongoDriver.connect(connectionInfo, collections);
         initialized = true;
     }
-}
+};
 
 /**
  *   Save log information into the log collection in the DB.
  *   Used instead of a log file for ease of access
+ *   NOTE: no callback given since log saving should be rather trivial
+ *   @param log The log object to save
  */
-function saveLog(log) {
-    mongo.log.save(log);
+exports.saveLog = function(log) {
+    db.log.save(log);
 }
+
+/**
+ *  Searches the log collection for objects with the given status
+ *  @param status The type of status to search for
+ *  @param limit The number of results to limit the search to
+ */
+exports.findLogByStatusType = function(status, limit) {
+
+};
 
 /**
  *    Saves the authorization token for the current user. access_token is analogous to a session_id
  *     TODO this should probably have a callback
  */
-function saveUserAuthorization(userID, access_token) {
-    mongo.userauthorization.save({'userID':userID, 'access_token':access_token}, function (err, saved) {
+exports.saveUserAuthorization = function(userID, access_token) {
+    db.userauthorization.save({'userID':userID, 'access_token':access_token}, function (err, saved) {
         if (err || !saved) {
             log.log("Error occured while saving userauthorization " + JSON.stringify(err));
         }
     });
-}
+};
 
 /**
  *    Returns whether or not the user (specified by userID) is still authorized.
  *    Does so by calling the function specified by callback and passing it a value of
  *    true is they are authorized and false if they are not
  */
-function isUserAuthorized(userID, access_token, callback) {
-    mongo.userauthorization.find({'userID':userID, 'access_token':access_token}, function (err, results) {
+exports.isUserAuthorized = function(userID, access_token, callback) {
+    db.userauthorization.find({'userID':userID, 'access_token':access_token}, function (err, results) {
         var found = false;
         console.log("results from db " + JSON.stringify(results));
         //TODO: add timeout check!
@@ -62,13 +73,13 @@ function isUserAuthorized(userID, access_token, callback) {
             callback(false);
         }
     });
-}
+};
 
 /**
  *    Stores basic information about a user including the UUID used in sending push requests to the phone
  *    Called when a user first launches the app on their phone.
  */
-function registerUser(info, callback) {
+exports.registerUser = function(info, callback) {
     //TODO verify registration information?
     var d = new Date();
     var date = d.toDateString() + " " + d.toLocaleTimeString() + " ";
@@ -80,7 +91,7 @@ function registerUser(info, callback) {
         "userID":info.userID,
         "created":date
     };
-    mongo.userinformation.save(data, function (err, saved) {
+    db.userinformation.save(data, function (err, saved) {
         if (err || !saved) {
             log.log("Error occured while saving userinformation " + JSON.stringify(err));
             callback(false);
@@ -89,10 +100,4 @@ function registerUser(info, callback) {
             callback(true);
         }
     });
-}
-
-exports.init = init;
-exports.saveLog = saveLog;
-exports.isUserAuthorized = isUserAuthorized;
-exports.saveUserAuthorization = saveUserAuthorization;
-exports.registerUser = registerUser;
+};

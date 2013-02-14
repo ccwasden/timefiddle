@@ -5,38 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d68abe47-a493-4b0a-9402-44e4899e7cbc" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\.idea\Hello World.iml" afterPath="$PROJECT_DIR$/.idea/TimeFiddle.iml" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\download-for-mobile.html" afterPath="$PROJECT_DIR$/public/download-for-mobile.html" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\home-page-mockup.html" afterPath="$PROJECT_DIR$/public/home-page-mockup.html" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\images\androidtimefiddle.png" afterPath="$PROJECT_DIR$/public/images/androidtimefiddle.png" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\images\available-on-app-store.png" afterPath="$PROJECT_DIR$/public/images/available-on-app-store.png" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\images\available-on-google-play.png" afterPath="$PROJECT_DIR$/public/images/available-on-google-play.png" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\images\button-android-test.png" afterPath="$PROJECT_DIR$/public/images/button-android-test.png" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\images\button-android.png" afterPath="$PROJECT_DIR$/public/images/button-android.png" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\images\button-appstore.png" afterPath="$PROJECT_DIR$/public/images/button-appstore.png" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\images\create-event-button.png" afterPath="$PROJECT_DIR$/public/images/create-event-button.png" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\images\dash.png" afterPath="$PROJECT_DIR$/public/images/dash.png" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\images\dotted.png" afterPath="$PROJECT_DIR$/public/images/dotted.png" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\images\facebook-link.png" afterPath="$PROJECT_DIR$/public/images/facebook-link.png" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\images\for-windows7-download.png" afterPath="$PROJECT_DIR$/public/images/for-windows7-download.png" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\images\google-plus-link.png" afterPath="$PROJECT_DIR$/public/images/google-plus-link.png" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\images\ipadtimefiddle.png" afterPath="$PROJECT_DIR$/public/images/ipadtimefiddle.png" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\images\iphonetimefiddle.png" afterPath="$PROJECT_DIR$/public/images/iphonetimefiddle.png" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\images\mail-link.png" afterPath="$PROJECT_DIR$/public/images/mail-link.png" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\images\one.png" afterPath="$PROJECT_DIR$/public/images/one.png" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\images\three.png" afterPath="$PROJECT_DIR$/public/images/three.png" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\images\two.png" afterPath="$PROJECT_DIR$/public/images/two.png" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\images\windows7-download.png" afterPath="$PROJECT_DIR$/public/images/windows7-download.png" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\images\windowsphonetimefiddle.png" afterPath="$PROJECT_DIR$/public/images/windowsphonetimefiddle.png" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\jquery.min.js" afterPath="$PROJECT_DIR$/public/jquery.min.js" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\mockup-create.html" afterPath="$PROJECT_DIR$/public/mockup-create.html" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\sample-css.css" afterPath="$PROJECT_DIR$/public/sample-css.css" />
-      <change type="MOVED" beforePath="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\web-app\stylesheets\style.css" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/database.js" afterPath="$PROJECT_DIR$/database/database.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/log.js" afterPath="$PROJECT_DIR$/log/log.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
     </list>
     <ignored path="Hello World.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,37 +28,19 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="database.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/database.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="97" column="9" selection-start="3332" selection-end="3332" vertical-scroll-proportion="3.0650406">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="28" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="email.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/email.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="29" selection-start="902" selection-end="902" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.spec.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jasmine-tests/test.spec.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="7" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="database.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/database.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="10" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
+            <state line="46" column="5" selection-start="1248" selection-end="1248" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -95,43 +49,7 @@
       <file leaf-file-name="log.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/log/log.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="3" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home-page-mockup.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/home-page-mockup.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="8" selection-start="792" selection-end="792" vertical-scroll-proportion="-4.3461537">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mockup-create.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/mockup-create.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="0" selection-start="4468" selection-end="4468" vertical-scroll-proportion="-4.269231">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="9" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.21375465">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="eventCreated.jade" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/eventCreated.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
+            <state line="23" column="35" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -140,7 +58,43 @@
       <file leaf-file-name="index.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="41" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
+            <state line="6" column="31" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/layout.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="17" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/index.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="13" selection-start="22" selection-end="29" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="email.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/email.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="35" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.spec.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jasmine-tests/test.spec.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="41" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -159,27 +113,28 @@
     </commandsHistory>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/models/database.js" />
-        <option value="$PROJECT_DIR$/database/database.js" />
         <option value="$PROJECT_DIR$/views/eventCreated.jade" />
-        <option value="$PROJECT_DIR$/routes/email.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/test,js.js" />
         <option value="$PROJECT_DIR$/test.js" />
         <option value="$PROJECT_DIR$/jasmine-tests/test.js" />
-        <option value="$PROJECT_DIR$/jasmine-tests/test.spec.js" />
         <option value="$PROJECT_DIR$/jasmine-tests/integration.spec.js" />
         <option value="$PROJECT_DIR$/jasmine-tests/acceptance.spec.js" />
+        <option value="$PROJECT_DIR$/jasmine-tests/test.spec.js" />
+        <option value="$PROJECT_DIR$/routes/email.js" />
+        <option value="$PROJECT_DIR$/api-server/api.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/log/log.js" />
+        <option value="$PROJECT_DIR$/database/database.js" />
       </list>
     </option>
   </component>
@@ -240,20 +195,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Hello World">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -282,6 +223,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimeFiddle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optimal-time" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimeFiddle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optimal-time" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -296,8 +265,54 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="log" />
+              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimeFiddle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optimal-time" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimeFiddle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optimal-time" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Hello World">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -313,21 +328,21 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="157" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="reference.settings.deploy.options" />
     <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="164" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="831" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="839" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="831" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="157" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="155" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -337,6 +352,7 @@
       <recent name="C:\Users\Dashane\CS428\Hello World\public\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public\views" />
       <recent name="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\public" />
       <recent name="C:\Users\Dashane\CS428\TimeFiddle\optimal-time\jasmine-tests" />
     </key>
@@ -403,7 +419,31 @@
       <created>1360283505635</created>
       <updated>1360283505635</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="re-worked the layout so the home page loads from root">
+      <created>1360303000301</created>
+      <updated>1360303000301</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added gzip compression to server">
+      <created>1360621283582</created>
+      <updated>1360621283582</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added mobile subdomains to app">
+      <created>1360639301555</created>
+      <updated>1360639301555</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added mobile subdomains to app">
+      <created>1360640927539</created>
+      <updated>1360640927539</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Tweaked mobile subdomains for app">
+      <created>1360715234586</created>
+      <updated>1360715234586</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fixed some routing issues">
+      <created>1360797276244</created>
+      <updated>1360797276244</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -430,23 +470,23 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.4973939" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24944155" sideWeight="0.23499142" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24944155" sideWeight="0.67066896" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39108062" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39965695" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24944155" sideWeight="0.67581475" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39108062" sideWeight="0.4973939" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32590052" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39108062" sideWeight="0.4973939" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32418525" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32761577" sideWeight="0.4973939" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39965695" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32933104" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -485,7 +525,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="re-worked the layout so the home page loads from root" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed some routing issues" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -501,40 +541,34 @@
     <MESSAGE value="Testing CI" />
     <MESSAGE value="Adding framework for writing jasmine-tests" />
     <MESSAGE value="re-worked the layout so the home page loads from root" />
+    <MESSAGE value="Added gzip compression to server" />
+    <MESSAGE value="Added mobile subdomains to app" />
+    <MESSAGE value="Tweaked mobile subdomains for app" />
+    <MESSAGE value="Fixed some routing issues" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/routes/user.js">
+    <entry file="file://$PROJECT_DIR$/jasmine-tests/test.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="2" selection-start="107" selection-end="107" vertical-scroll-proportion="0.36060607" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="38" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="23" selection-start="160" selection-end="160" vertical-scroll-proportion="0.4121212">
+        <state line="8" column="41" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/database.js">
+    <entry file="file://$PROJECT_DIR$/jasmine-tests/test.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="10" selection-start="269" selection-end="269" vertical-scroll-proportion="0.0">
+        <state line="8" column="41" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/eventCreated.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="5" column="0" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -547,63 +581,68 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/npm-debug.log">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-6.320113" />
+        <state line="190" column="9" selection-start="5143" selection-end="5143" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jasmine-tests/test.spec.js">
+    <entry file="file://$PROJECT_DIR$/views/layout.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="7" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0">
+        <state line="6" column="17" selection-start="121" selection-end="121" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/email.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="29" selection-start="902" selection-end="902" vertical-scroll-proportion="0.0">
+        <state line="11" column="35" selection-start="281" selection-end="281" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/views/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="28" selection-start="733" selection-end="733" vertical-scroll-proportion="0.0">
+        <state line="2" column="13" selection-start="22" selection-end="29" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/mobile-app/TimeFiddle/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jasmine-tests/test.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="41" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="41" selection-start="104" selection-end="104" vertical-scroll-proportion="0.0">
+        <state line="6" column="31" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="5" selection-start="1248" selection-end="1248" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/log/log.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="3" selection-start="1225" selection-end="1225" vertical-scroll-proportion="0.0">
+        <state line="23" column="35" selection-start="754" selection-end="754" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/home-page-mockup.html">
+    <entry file="file://$PROJECT_DIR$/database/database.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="8" selection-start="792" selection-end="792" vertical-scroll-proportion="-4.3461537">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/mockup-create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="0" selection-start="4468" selection-end="4468" vertical-scroll-proportion="-4.269231">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="9" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.21375465">
+        <state line="97" column="9" selection-start="3332" selection-end="3332" vertical-scroll-proportion="3.0650406">
           <folding />
         </state>
       </provider>

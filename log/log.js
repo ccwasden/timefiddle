@@ -4,7 +4,7 @@
  *    The different levels of logging serve to simplify the search and provide a easy level of abstraction.
  */
 
-var db = require("../database/database");
+var db = require('../database/database');
 var saveToDatabase = false;
 
 /**
@@ -12,14 +12,20 @@ var saveToDatabase = false;
  *
  * @param message The message to log
  */
-function log(message) {
+function log(message, status, obj) {
+    var dbLog = {};
+    if(obj) {
+        dbLog = obj;
+    }
     var d = new Date();
     var date = d.toDateString() + " " + d.toLocaleTimeString() + " ";
 
     if (typeof message === 'string') {
-        console.log(date + message);
+        console.log(status + " " + date + message);
         if(saveToDatabase) {
-            var dbLog = {"date":date, "message":message};
+            dbLog.status = status;
+            dbLog.date = date;
+            dbLog.message = message;
             db.saveLog(dbLog);
         }
     }
@@ -38,6 +44,7 @@ exports.init = function(app) {
     } else if(app === 'production') {
         saveToDatabase = true;
     }
+    exports.info("Logger initialized for " + app);
     //Any other initialization can happen here
 };
 
@@ -46,7 +53,7 @@ exports.init = function(app) {
  * @param message
  */
 exports.debug = function(message) {
-    log("DEBUG " + message);
+    log(message, "DEBUG");
 };
 
 /**
@@ -54,7 +61,7 @@ exports.debug = function(message) {
  * @param message
  */
 exports.info = function(message) {
-    log("INFO " + message);
+    log(message, "INFO");
 };
 
 /**
@@ -62,7 +69,7 @@ exports.info = function(message) {
  * @param message
  */
 exports.warn = function(message) {
-    log("WARNING " + message);
+    log(message, "WARNING");
 };
 
 /**
@@ -70,5 +77,14 @@ exports.warn = function(message) {
  * @param message
  */
 exports.error = function(message) {
-    log("ERROR " + message);
+    log(message, "ERROR");
+};
+
+/**
+ * Logs the request from the given ip for the given url.
+ * @param url
+ * @param ip
+ */
+exports.logRequest = function(url, ip) {
+    log(url, "REQUEST", {"ip": ip});
 };

@@ -27,7 +27,7 @@ app.configure(function () {
     //Path to static files
     app.use(express.static(path.join(__dirname, 'public')));
 
-    //Using Jade templates for the time being
+    //Using Jade templates for now
     app.set('view engine', 'jade');
     app.set('views', __dirname + '/views');
 
@@ -39,11 +39,22 @@ app.configure(function () {
     }
 });
 
+//Initialize the database
+var db = require(__dirname + '/database/database');
+db.init();
+
+//Initialize the logger
+var log = require(__dirname + '/log/log');
+log.init('production');
+
 //Development settings
 app.configure('development', function () {
-    app.locals.log = require('./log/log.js').init('development');
-    //Set up subdomains
     app.get('*', function(req, res, next){
+
+        //Log each request
+        log.logRequest(req.url, req.ip);
+
+        //Set up subdomains
         var host = req.headers.host;
         if(host.startsWith('m.localhost') || host.startsWith('mobile.localhost')) {
             req.url = '/mobile-app/TimeFiddle/build/TimeFiddle/production' + req.url;
@@ -54,8 +65,12 @@ app.configure('development', function () {
 
 //Production settings
 app.configure('production', function () {
-    //Set up subdomains
     app.get('*', function(req, res, next){
+
+        //Log each request
+        log.logRequest(req.url, req.ip);
+
+        //Set up subdomains
         var host = req.headers.host;
         if(host.startsWith('m.timefiddle') || host.startsWith('mobile.timefiddle')) {
             req.url = '/mobile-app/TimeFiddle/build/TimeFiddle/production' + req.url;
@@ -73,5 +88,5 @@ app.get('/download', mobile.download);
 app.post('/sendEmail', email.send);
 
 http.createServer(app).listen(app.get('port'), function () {
-    console.log("Express server listening on port " + app.get('port'));
+    log.info("Express server listening on port " + app.get('port'));
 });
