@@ -107,7 +107,7 @@
 }
 
 body {
-	background:white;
+	background:#FAFAFA;
 	font-family:"OpenSansRegular", Arial, Helvetica, Tahoma, sans-serif;
 }
 
@@ -561,9 +561,7 @@ a.facebook:focus, a.google-plus:focus, a.email:focus {
 	user-select:none;
 	display:inline-block;
 	cursor:pointer;
-	padding:12px 40px;
-	font-size:28px;
-	font-weight:700;
+	padding:5px 12px 5px 12px;
 	-webkit-border-radius:4px;
 	border-radius:4px;
 	background-color:#00688B;
@@ -601,6 +599,19 @@ a.facebook:focus, a.google-plus:focus, a.email:focus {
 	box-shadow:0 1px 0 #fff,inset 0 0 25px rgba(0,0,0,0.2);
 }
 
+.button.small {
+	font-size:15px;
+}
+.button.med {
+	font-size:30px;
+}
+.button.big {
+	font-size:40px;
+}
+.button.less-active {
+	background-color:green;
+}
+
 .mobile-download img {
 	max-height:400px;
 	margin:5px;
@@ -610,6 +621,7 @@ a.facebook:focus, a.google-plus:focus, a.email:focus {
 	position:relative;
 	height:70px;
 	padding:0 20px;
+	font-weight:700;
 	margin-bottom:10px;
 	vertical-align:middle;
 	-webkit-tap-highlight-color:transparent;
@@ -644,6 +656,7 @@ a.facebook:focus, a.google-plus:focus, a.email:focus {
 
 .create-event-button {
 	margin:30px 0 30px 0;
+	font-size:28px;
 }
 
 .create-event-button span {
@@ -659,4 +672,30 @@ a.facebook:focus, a.google-plus:focus, a.email:focus {
 }
 
 /***END DOWNLOAD FOR MOBILE ***/
+
+
+
+/***LOGIN***/
+
+table.login {
+	width:100%;
+	margin:30px 0px 30px 0px;
+}
+
+table.login td {
+	width:50%;
+}
+
+table.login tr td:first-child {
+
+}
+
+
+table.login .text {
+	border-top:1px solid #eee;
+	padding:5px 2px 5px 2px;
+	font-size:18px;
+}
+
+/***END LOGIN***/
 
