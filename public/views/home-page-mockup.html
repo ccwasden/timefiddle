@@ -3,24 +3,14 @@
 <html>
 	<head>
 		<title>Home Page Mockup</title>
-		<script type="text/javascript" src="../javascripts/jquery.min.js"></script>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<link rel="stylesheet" type="text/css" href="../stylesheets/style.css" />
+
+		<script type="text/javascript" src="../views/head-tag.js"></script>
+
 	</head>
 	<body>
 		<div class="main-wrapper">
 			<div id="header">
-				<a id="logo" href="#" title="TimeFiddle">Some Cool Logo</a>
-				<ul>
-					<li class="active big">
-						<a href="/">TimeFiddle</a>
-					</li>
-					<li><a href="#">About</a></li>
-					<li>
-						<a href="/create" class="create-event">Create Event</a>
-					</li>
-					<li><a href="/login">Login</a></li>
-				</ul>
+				<script type="text/javascript" src="../views/header.js"></script>
 			</div>
 		</div>
 		<div id="content">
@@ -40,41 +30,43 @@
 
 			</div>
 		</div>
-		<div id="footer" class="center main-wrapper">
-			<div class="seperator margin-bottom">
-				<hr>
+ 
+		<!-- Login Modal -->
+		<div id="login" class="modal hide fade" tabindex="-1">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">×</button>
+				<h1 class="center">Login</h1>
 			</div>
-			<ul>
-				<li>
-					<a href="/download">Download for Mobile</a>
-				</li>
-				<li>
-					<a href="#">Privacy Policy</a>
-				</li>
-				<li>
-					<a href="#">Support</a>
-				</li>
-				<li>
-					<a href="#">Contact</a>
-				</li>
-			</ul>
+			<div class="modal-body">
+				<form action="putintheaction">
+					<table class="login">
+						<tr>
+							<td>
+								<input type="text" name="user-name" placeholder="Username" class="text"/>
+							</td>
+							<td>
+								Login with facebook
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="password" name="password" placeholder="Password" class="text"/>
+							</td>
+							<td>
+								Login with google+
+							</td>
+						</tr>
+					</table>
+					
+				</form>
+			</div>
+			<div class="modal-footer center">
+				<input type="submit" value="Go" class="button small">
+			</div>
+		</div>
+		<div id="footer" class="center main-wrapper">
+			<script type="text/javascript" src="../views/footer.js"></script>
 		</div>
 	</body>
 </html>
 
-<style type="text/css">
-
-
-
-</style>
-
-<script type="text/javascript">
-
-	var navbarLinks = $("#header").find("li");
-
-	navbarLinks.click(function(e){
-		navbarLinks.removeClass("active");
-		$(this).addClass("active big");
-	});
-
-</script>
