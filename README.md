@@ -1,3 +1,2 @@
-This is the README file for our project. Nothing much to see here yet...
-
-TimeFiddle
+==TimeFiddle==
+TimeFiddle is a new web application that helps people easily schedule meetings. Did me mention it's beautiful, too?
