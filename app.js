@@ -11,6 +11,8 @@ var login = require('./routes/login');
 var mobile = require('./routes/mobile');
 var http = require('http');
 var path = require('path');
+var lessMiddleware = require("less-middleware");
+
 
 var app = express();
 
@@ -31,12 +33,22 @@ app.configure(function () {
     app.set('view engine', 'jade');
     app.set('views', __dirname + '/views');
 
+    app.use(lessMiddleware({
+        dest: __dirname + '/public/stylesheets',
+        src: __dirname + '/src/less',
+        prefix: '/stylesheets',
+        compress: true
+    }));
+
     //Some helper code for working with Strings
     if (typeof String.prototype.startsWith != 'function') {
         String.prototype.startsWith = function (str){
             return this.slice(0, str.length) == str;
         };
     }
+    app.use(express.static(__dirname + '/public'));
+
+    
 });
 
 //Initialize the database
@@ -61,6 +73,7 @@ app.configure('development', function () {
         }
         next();
     });
+    
 });
 
 //Production settings
@@ -77,7 +90,9 @@ app.configure('production', function () {
         }
         next();
     });
+
 });
+
 
 //Define routes for the app. Basically creating a mapping between URLs and functions
 app.get('/', routes.index);
