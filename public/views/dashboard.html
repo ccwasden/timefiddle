@@ -7,6 +7,7 @@
 		<div class="main-wrapper">
 			<div id="header">
 				<script type="text/javascript" src="../views/header.js"></script>
+				<script type="text/javascript" src="../javascripts/dashboard.js"></script>
 			</div>
 		</div>
 		<div class="content">
@@ -30,7 +31,7 @@
 
 						<h3>Your Events</h3>
 						<br />
-						<div class="event active">
+						<div class="event active" onclick="eventIsActive(this)">
 							<table>
 								<tbody>
 									<tr>
@@ -44,7 +45,7 @@
 								</tbody>
 							</table>
 						</div>
-						<div class="event">
+						<div class="event" onclick="eventIsActive(this)">
 							<table>
 								<tbody>
 									<tr>
@@ -58,7 +59,7 @@
 								</tbody>
 							</table>
 						</div>
-						<div class="event">
+						<div class="event" onclick="eventIsActive(this)">
 							<table>
 								<tbody>
 									<tr>
