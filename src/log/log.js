@@ -64,9 +64,7 @@ exports.error = function(message) {
 };
 
 /**
- * Logs the request from the given ip for the given url.
- * @param url
- * @param ip
+ * Middleware function for express. Logs every request made to the server into the database.
  */
 exports.logRequest = function() {
     return function(req, res, next) {

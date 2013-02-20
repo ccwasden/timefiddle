@@ -9,9 +9,9 @@ var path = require('path');
 var lessMiddleware = require("less-middleware");
 
 //Our custom modules
-var logger = require(__dirname + '/log/log');
-var db = require(__dirname + '/database/database');
-var routes = require('./routes');
+var logger = require(__dirname + '/src/log/log');
+var db = require(__dirname + '/src/database/database');
+var routes = require(__dirname + '/routes');
 
 //Our custom modules that need no further references
 require(__dirname + '/src/string/string');
