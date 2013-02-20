@@ -66,7 +66,7 @@ app.configure('production', function () {
     app.all('*', function(req, res, next){
         var host = req.headers.host;
         if(host.endsWith('.net') || host.endsWith('.org') || host.endsWith('.info')) {
-            req.redirect(301, 'http://www.timefiddle.com');
+            res.redirect(301, 'http://www.timefiddle.com');
         }
         else if(host.startsWith('m.timefiddle') || host.startsWith('mobile.timefiddle')) {
             req.url = '/mobile-app/TimeFiddle/build/TimeFiddle/production' + req.url;
