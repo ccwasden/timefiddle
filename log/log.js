@@ -68,6 +68,10 @@ exports.error = function(message) {
  * @param url
  * @param ip
  */
-exports.logRequest = function(url, ip) {
-    log(url, "REQUEST", {"ip": ip});
+exports.logRequest = function() {
+    return function(req, res, next) {
+        log(req.url, "REQUEST", {"ip": req.ip});
+        next();
+    }
 };
+

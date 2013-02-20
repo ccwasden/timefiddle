@@ -9,19 +9,16 @@ var path = require('path');
 var lessMiddleware = require("less-middleware");
 
 //Our custom modules
-var log = require(__dirname + '/log/log');
+var logger = require(__dirname + '/log/log');
 var db = require(__dirname + '/database/database');
+var routes = require('./routes');
 
 //Our custom modules that need no further references
 require(__dirname + '/src/string/string');
 
-//Our custom routes
-var routes = require('./routes');
-
 var app = express();
 
 app.configure(function () {
-
     //Config options
     app.set('title', 'TimeFiddle');
     app.set('port', process.env.PORT || 3000);
@@ -30,6 +27,7 @@ app.configure(function () {
     app.use(express.bodyParser());
     app.use(express.methodOverride());
     app.use(app.router);
+    app.use(logger.logRequest());
 
     //Using Jade templates for now
     app.set('view engine', 'jade');
@@ -77,12 +75,6 @@ app.configure('production', function () {
     });
 });
 
-//Log every single request
-app.all('*', function(req, res, next) {
-    log.logRequest(req.url, req.ip);
-    next();
-});
-
 //Define routes for the app. Basically creating a mapping between URLs and functions
 app.get('/', routes.index);
 app.get('/users', routes.user.list);
@@ -93,5 +85,5 @@ app.get('/download', routes.mobile.download);
 app.post('/sendEmail', routes.email.send);
 
 http.createServer(app).listen(app.get('port'), function () {
-    log.info("Express server listening on port " + app.get('port'));
+    logger.info("Express server listening on port " + app.get('port'));
 });
