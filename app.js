@@ -37,8 +37,7 @@ app.configure(function () {
     app.use(lessMiddleware({
         dest: __dirname + '/public/stylesheets',
         src: __dirname + '/src/less',
-        prefix: '/stylesheets',
-        compress: true
+        prefix: '/stylesheets'
     }));
 
     //Initialize the database for the app

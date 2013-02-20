@@ -2,7 +2,7 @@ document.write(	'<script type="text/javascript" src="../javascripts/jquery.min.j
 
 				'</script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'+
 
-				'<link rel="stylesheet" type="text/css" href="../stylesheets/styles.css" />'+
+				'<link rel="stylesheet" type="text/css" href="../stylesheets/style.css" />'+
 
 				'<script type="text/javascript" src="../plugins/bootstrap/js/bootstrap.min.js">'+
 
