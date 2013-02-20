@@ -10,8 +10,6 @@ function eventIsActive(event) {
 
 	});
 
-	console.log($(event));
-
 	$(event).addClass("active");
 
 }

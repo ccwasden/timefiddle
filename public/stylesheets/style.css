@@ -178,7 +178,7 @@ textarea {
 }
 
 #logo img {
-	max-height:25px;
+	max-height:40px;
 }
 
 #header {
@@ -636,14 +636,16 @@ table.login .text {
 	border-right:2px solid #a1a0a0;
 	background-color: white;
 	width:95px;
-	height:100%;
+	height:768px;
 }
+
+
 
 .dashboard-content .middle-section{
 	float:left;
 	border-right:2px solid #a1a0a0;
 	width:350px;
-	height:100%;
+	height:768px;
 }
 
 .dashboard-content .middle-section .event-list {
@@ -709,10 +711,51 @@ table.login .text {
 	color:#aae4ec !important;
 }
 
+
+
 .dashboard-content .right-section{
 	float:left;
-	width:498px;
-	height:100%;
+	width:496px;
+	height:768px;
+	background-color:#EEEEEE;
+}
+
+.dashboard-content .right-section .main-info {
+	padding:20px;
+}
+
+.dashboard-content .right-section .main-info .response {
+	padding:10px;
+	border:2px solid #CDCDCD;
+	background-color: #E0E0E0;
+	margin-bottom:20px;
+}
+
+.dashboard-content .right-section .main-info .response h3 {
+	opacity:.5;
+}
+
+.dashboard-content .right-section .main-info table.attendees {
+	border-spacing: 0px;
+	width:100%;
+	margin-bottom:20px;
+}
+
+.dashboard-content .right-section .main-info table.attendees td {
+	background-color:white;
+	border:none;
+	border-bottom:2px solid #EEEEEE;
+	padding:5px;
+	color:#00688B;
+}
+
+.dashboard-content .right-section .main-info table.attendees td p {
+	margin-bottom:0px;
+}	
+
+.dashboard-content .right-section .main-info table.attendees tr td:last-child {
+	font-size:14px;
+	text-align:right;
 }
 
 
