@@ -1,3 +1,11 @@
+/***COMMENTS***/
+
+/*
+main-color:#00688B;
+main-dark-color:;
+
+/***END COMMENTS***/
+
 /** FONTS */
 @font-face {
     font-family: 'OpenSansLight';
@@ -74,7 +82,7 @@ body {
 
 h1, h2, h3, h4, h5, h6, h2.big {
 	color:#1c1c1c;
-	font-family:"OpenSansLight";
+	font-family:"OpenSansLight", Arial, Helvetica, Tahoma, sans-serif;
 }
 
 h1, h2.big {
@@ -86,7 +94,7 @@ h1, h2.big {
 }
 
 h1 > strong, h2.big > strong {
-	font-family:"OpenSansRegular";
+	font-family:"OpenSansRegular", Arial, Helvetica, Tahoma, sans-serif;
 	font-weight:normal;
 	color:#00688B;
 }
@@ -110,8 +118,7 @@ h2.mid {
 
 h3 {
 	font-size:20px;
-	font-weight:700;
-	letter-spacing:-1px;
+	letter-spacing: 1px;
 }
 
 h3.event {
@@ -125,6 +132,7 @@ h3.event {
 h4, h5, h6 {
 	margin:0 0 8px 0;
 	font-size:16px;
+	letter-spacing: 1px;
 }
 
 /* End of Headers */
@@ -161,6 +169,16 @@ textarea {
 	width: 945px;
 	padding: 0 10px;
 	margin: 0 auto;
+}
+
+#logo {
+	position: absolute;
+	left: 0;
+	top: 30px;
+}
+
+#logo img {
+	max-height:25px;
 }
 
 #header {
@@ -433,10 +451,6 @@ a.facebook:focus, a.google-plus:focus, a.email:focus {
 /***DOWNLOAD FOR MOBILE ***/
 
 .mobile-download {
-
-}
-
-.mobile-download {
 	margin:40px 0px 20px 0px ;
 }
 
@@ -516,7 +530,8 @@ a.facebook:focus, a.google-plus:focus, a.email:focus {
 .download-android span{
 	background-position:center 12px;
 	width:203px;
-	background-image:url("../images/button-android.png")}
+	background-image:url("../images/button-android.png");
+}
 
 .download-iphone span {
 	width:154px;
@@ -585,3 +600,121 @@ table.login .text {
 
 /***END LOGIN***/
 
+/***DASHBOARD***/
+
+.dashboard-content {
+	border:2px solid #1c1c1c;
+	width: 945px;
+	margin: 0 auto;
+	height:800px;
+	background-color: #FCFCFC;
+}
+
+.dashboard-content .header {
+	width:100%;
+	height:30px;
+	border-bottom:2px solid #1c1c1c;
+	background-color: white;
+}
+
+.dashboard-content .header .account{
+	float:right;
+	padding-right:20px;
+}
+
+.dashboard-content .header .account p a{
+	padding-left:10px;
+	color:#00688B;
+}
+.dashboard-content .header .account p a:hover{
+	color:#a1a0a0;
+}
+
+
+.dashboard-content .left-bar{
+	float:left;
+	border-right:2px solid #a1a0a0;
+	background-color: white;
+	width:95px;
+	height:100%;
+}
+
+.dashboard-content .middle-section{
+	float:left;
+	border-right:2px solid #a1a0a0;
+	width:350px;
+	height:100%;
+}
+
+.dashboard-content .middle-section .event-list {
+	padding:20px;
+}
+
+.dashboard-content .middle-section .event-list .event {
+	clear:both;
+	padding:5px;
+	border:2px solid #CCCCCC;
+	margin-bottom:10px;
+	overflow:hidden;
+}
+
+.dashboard-content .middle-section .event-list .event table{
+	width:100%;
+}
+
+.dashboard-content .middle-section .event-list .event .info-left {
+	text-align:left;
+}
+
+.dashboard-content .middle-section .event-list .event .info-left p {
+	font-family:"OpenSansLight", Arial, Helvetica, Tahoma, sans-serif;
+	font-size:15px;
+}
+
+.dashboard-content .middle-section .event-list .event .info-right {
+	text-align:right;
+}
+
+.dashboard-content .middle-section .event-list .event .info-right p {
+	font-family:"OpenSansLight", Arial, Helvetica, Tahoma, sans-serif;
+	font-size:15px;
+}
+
+.dashboard-content .middle-section .event-list .event .info-right p.date {
+	color:#00688B;
+}
+
+.dashboard-content .middle-section .event-list .event.active {
+	background-color:#00688B;
+}
+
+.dashboard-content .middle-section .event-list .event.active h4 {
+	color:white;
+}
+
+.dashboard-content .middle-section .event-list .event.active p {
+	color:#aae4ec !important;
+}
+
+.dashboard-content .middle-section .event-list .event:hover {
+	background-color:#00688B;
+	cursor:pointer;
+}
+
+.dashboard-content .middle-section .event-list .event:hover h4 {
+	color:white;
+}
+
+.dashboard-content .middle-section .event-list .event:hover p {
+	color:#aae4ec !important;
+}
+
+.dashboard-content .right-section{
+	float:left;
+	width:498px;
+	height:100%;
+}
+
+
+
+/***END DASHBOARD***/

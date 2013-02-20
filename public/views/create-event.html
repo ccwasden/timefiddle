@@ -1,110 +1,111 @@
 <!DOCTYPE html>
 
-<html>
+<html ng-app>
 	<head>
 		<title>Event Creation Mockup</title>
 		<script type="text/javascript" src="../views/head-tag.js"></script>
-		<link rel="stylesheet" type="text/css" href="../stylesheets/test.less">
-		<script src="../javascripts/less.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="../javascripts/create-event.js"></script>
 	</head>
 	<body>
-		<div class="main-wrapper"><h1 class="bob">Hey</h1>
+		<div class="main-wrapper">
 			<div id="header">
 				<script type="text/javascript" src="../views/header.js"></script>
 			</div>
 		</div>
-		<div id="content">
-			<div class="event-creation">
-				<div class="main-wrapper">
-					<h1 class="center no-margin">
-						<text>Event</text> <strong>Creation</strong>
-					</h1>
-				</div>
-				<div class="event-creation-block">
-					<div id="event-info" class="creation-block">
-						
+		<div id="content" ng-controller="CreateEvent">
+			<form ng-submit="saveEvent()">
+				<div class="event-creation">
+					<div class="main-wrapper">
+						<h1 class="center no-margin">
+							<text>Event</text> <strong>Creation</strong>
+						</h1>
 					</div>
-				</div>
-				<div class="event-creation-block">
-					<div id="time-selection" class="creation-block">
-						
-					</div>
-					<div class="event-time-selection-block">
-						<div class="month">
+					<div class="event-creation-block">
+						<div id="event-info" class="creation-block">
 							
 						</div>
-						<div class="calendar">
-							<table>
-								<tbody>
-									<tr>
-										<td>
-											<span class="month-name">January 2013</span>
-										</td>
-										<td>
-											<span class="month-arrows"><a href="#">&#9668;</a><a href="#">&#9658;</a></span>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-							<table>
-								<tbody>
-									<tr class="week-row">
-										<td>30</td>
-										<td>1</td>
-										<td>2</td>
-										<td>3</td>
-										<td>4</td>
-										<td>5</td>
-										<td>6</td>
-									</tr>
-									<tr class="week-row">
-										<td>30</td>
-										<td>1</td>
-										<td>2</td>
-										<td>3</td>
-										<td>4</td>
-										<td>5</td>
-										<td>6</td>
-									</tr>
-									<tr class="week-row">
-										<td>30</td>
-										<td>1</td>
-										<td>2</td>
-										<td>3</td>
-										<td>4</td>
-										<td>5</td>
-										<td>6</td>
-									</tr>
-									<tr class="week-row">
-										<td>30</td>
-										<td>1</td>
-										<td>2</td>
-										<td>3</td>
-										<td>4</td>
-										<td>5</td>
-										<td>6</td>
-									</tr>
-									<tr class="week-row">
-										<td>30</td>
-										<td>1</td>
-										<td>2</td>
-										<td>3</td>
-										<td>4</td>
-										<td>5</td>
-										<td>6</td>
-									</tr>
-								</tbody>
-							</table>
+					</div>
+					<div class="event-creation-block">
+						<div id="time-selection" class="creation-block">
+							
+						</div>
+						<div class="event-time-selection-block">
+							<div class="month">
+								
+							</div>
+							<div class="calendar">
+								<table>
+									<tbody>
+										<tr>
+											<td>
+												<span class="month-name">January 2013</span>
+											</td>
+											<td>
+												<span class="month-arrows"><a href="#">&#9668;</a><a href="#">&#9658;</a></span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<table>
+									<tbody>
+										<tr class="week-row">
+											<td>30</td>
+											<td>1</td>
+											<td>2</td>
+											<td>3</td>
+											<td>4</td>
+											<td>5</td>
+											<td>6</td>
+										</tr>
+										<tr class="week-row">
+											<td>30</td>
+											<td>1</td>
+											<td>2</td>
+											<td>3</td>
+											<td>4</td>
+											<td>5</td>
+											<td>6</td>
+										</tr>
+										<tr class="week-row">
+											<td>30</td>
+											<td>1</td>
+											<td>2</td>
+											<td>3</td>
+											<td>4</td>
+											<td>5</td>
+											<td>6</td>
+										</tr>
+										<tr class="week-row">
+											<td>30</td>
+											<td>1</td>
+											<td>2</td>
+											<td>3</td>
+											<td>4</td>
+											<td>5</td>
+											<td>6</td>
+										</tr>
+										<tr class="week-row">
+											<td>30</td>
+											<td>1</td>
+											<td>2</td>
+											<td>3</td>
+											<td>4</td>
+											<td>5</td>
+											<td>6</td>
+										</tr>
+									</tbody>
+								</table>
 
+							</div>
+						</div>
+					</div>
+					<div class="event-creation-block">
+						<div id="attendee-selection" class="creation-block">
+							<input type="submit" value="Send" />
 						</div>
 					</div>
 				</div>
-				<div class="event-creation-block">
-					<div id="attendee-selection" class="creation-block">
-						
-					</div>
-				</div>
-			</div>
+			</form>
 		</div>
 		<div id="footer" class="center main-wrapper">
 			<script type="text/javascript" src="../views/footer.js"></script>
@@ -112,3 +113,13 @@
 	</body>
 </html>
 
+<script type="text/javascript">
+
+
+
+
+
+
+
+
+</script>

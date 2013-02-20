@@ -1,4 +1,6 @@
-document.write(	'<a id="logo" href="#" title="TimeFiddle">Some Cool Logo</a>'+
+document.write(	'<div id="logo">'+
+					'<a href="/" title="TimeFiddle"><img src="../images/timefiddle-logo.png" /></a>'+
+				'</div>'+
 				'<ul>'+
 					'<li class="active big">'+
 						'<a href="/">TimeFiddle</a>'+

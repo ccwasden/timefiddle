@@ -8,6 +8,7 @@ var user = require('./routes/user');
 var email = require('./routes/email');
 var event = require('./routes/event');
 var login = require('./routes/login');
+var dashboard = require('./routes/dashboard');
 var mobile = require('./routes/mobile');
 var http = require('http');
 var path = require('path');
@@ -99,6 +100,7 @@ app.get('/', routes.index);
 app.get('/users', user.list);
 app.get('/create', event.create);
 app.get('/login', login.index);
+app.get('/dashboard', dashboard.index);
 app.get('/download', mobile.download);
 app.post('/sendEmail', email.send);
 
