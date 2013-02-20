@@ -67,11 +67,14 @@ app.configure('production', function () {
         var host = req.headers.host;
         if(host.endsWith('.net') || host.endsWith('.org') || host.endsWith('.info')) {
             res.redirect(301, 'http://www.timefiddle.com');
+            //No next() after redirect
         }
         else if(host.startsWith('m.timefiddle') || host.startsWith('mobile.timefiddle')) {
             req.url = '/mobile-app/TimeFiddle/build/TimeFiddle/production' + req.url;
+            next();
+        } else {
+            next();
         }
-        next();
     });
 });
 
