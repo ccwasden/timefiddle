@@ -656,6 +656,7 @@ table.login .text {
 	border:2px solid #CCCCCC;
 	margin-bottom:10px;
 	overflow:hidden;
+	background-color:white;
 }
 
 .dashboard-content .middle-section .event-list .event table{
@@ -698,15 +699,30 @@ table.login .text {
 
 .dashboard-content .middle-section .event-list .event:hover {
 	background-color:#00688B;
+	-webkit-transition: background-color 100ms linear;
+    -moz-transition: background-color 100ms linear;
+    -o-transition: background-color 100ms linear;
+    -ms-transition: background-color 100ms linear;
+    transition: background-color 100ms linear;
 	cursor:pointer;
 }
 
 .dashboard-content .middle-section .event-list .event:hover h4 {
 	color:white;
+	-webkit-transition: color 100ms linear;
+    -moz-transition: color 100ms linear;
+    -o-transition: color 100ms linear;
+    -ms-transition: color 100ms linear;
+    transition: color 100ms linear;
 }
 
 .dashboard-content .middle-section .event-list .event:hover p {
 	color:#aae4ec !important;
+	-webkit-transition: color 100ms linear;
+    -moz-transition: color 100ms linear;
+    -o-transition: color 100ms linear;
+    -ms-transition: color 100ms linear;
+    transition: color 100ms linear;
 }
 
 .dashboard-content .right-section{
