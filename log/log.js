@@ -5,7 +5,6 @@
  */
 
 var db = require('../database/database');
-var saveToDatabase = false;
 
 /**
  * Simple method that prints out the given method to the console and saves a copy of it to the database
@@ -22,31 +21,15 @@ function log(message, status, obj) {
 
     if (typeof message === 'string') {
         console.log(status + " " + date + message);
-        if(saveToDatabase) {
-            dbLog.status = status;
-            dbLog.date = date;
-            dbLog.message = message;
-            db.saveLog(dbLog);
-        }
+        dbLog.status = status;
+        dbLog.date = date;
+        dbLog.message = message;
+        db.saveLog(dbLog);
     }
     else {
         console.log(date + "Invalid log message");
     }
 }
-
-/**
- * Simple initialization function used to set up the logger.
- * @param app
- */
-exports.init = function(app) {
-    if(app === 'development') {
-        saveToDatabase = false;
-    } else if(app === 'production') {
-        saveToDatabase = true;
-    }
-    exports.info("Logger initialized for " + app);
-    //Any other initialization can happen here
-};
 
 /**
  * Log messages at the DEBUG level

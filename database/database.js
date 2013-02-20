@@ -5,7 +5,7 @@
  */
 
 var log = require("../log/log.js");
-var initialized = false;
+var initialized;
 var db;
 
 /**
