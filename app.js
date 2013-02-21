@@ -80,6 +80,7 @@ app.configure('production', function () {
 
 //Define routes for the app. Basically creating a mapping between URLs and functions
 app.get('/', routes.index);
+app.get('/home', routes.home);
 app.get('/users', routes.user.list);
 app.get('/create', routes.event.create);
 app.get('/login', routes.login);
