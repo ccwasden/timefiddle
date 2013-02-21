@@ -606,17 +606,33 @@ table.login {
 
 /***DASHBOARD***/
 
+@d-border-size: 2px;
+@d-header-height:30px;
+@d-section-height: 750px;
+
+@d-leftbar-height: @d-section-height;
+@d-leftbar-width: 95px;
+
+@d-middlesection-height: @d-section-height;
+@d-middlesection-width: @d-leftbar-width + 255;
+
+@d-rightsection-height: @d-section-height;
+@d-rightsection-width: @d-middlesection-width + 146;
+
+@d-height: @d-header-height + @d-border-size + @d-section-height;
+@d-width: @d-leftbar-width + @d-border-size * 2 + @d-middlesection-width + @d-rightsection-width;
+
 .dashboard-content {
-	border:2px solid @main-dark-color;
-	width: 945px;
+	border:@d-border-size solid @main-dark-color;
+	width: @d-width;
+	height:@d-height;
 	margin: 0 auto;
-	height:800px;
 	background-color: #FCFCFC;
 
 	.header {
 		width:100%;
-		height:30px;
-		border-bottom:2px solid @main-dark-color;
+		height:@d-header-height;
+		border-bottom:@d-border-size solid @main-dark-color;
 		background-color: white;
 
 		.account {
@@ -638,17 +654,17 @@ table.login {
 
 	.left-bar {
 		float:left;
-		border-right:2px solid @dashboard-grey-color;
+		border-right:@d-border-size solid @dashboard-grey-color;
 		background-color: white;
-		width:95px;
-		height:768px;
+		width:@d-leftbar-width;
+		height:@d-leftbar-height;
 	}
 
 	.middle-section {
 		float:left;
-		border-right:2px solid @dashboard-grey-color;
-		width:350px;
-		height:768px;
+		border-right:@d-border-size solid @dashboard-grey-color;
+		width:@d-middlesection-width;
+		height:@d-middlesection-height;
 
 		.event-list {
 			padding:20px;
@@ -732,8 +748,8 @@ table.login {
 
 	.right-section {
 		float:left;
-		width:496px;
-		height:768px;
+		width:@d-rightsection-width;
+		height:@d-rightsection-height;
 		background-color:#EEEEEE;
 
 		.main-info {
@@ -769,7 +785,7 @@ table.login {
 					border:none;
 					border-bottom:2px solid #EEEEEE;
 					padding:5px;
-					color:#00688B;
+					color:@main-color;
 
 					p {
 						margin-bottom:0px;

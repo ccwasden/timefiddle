@@ -1,4 +1,4 @@
-<html>
+<html ng-app>
 	<head>
 		<title>TimeFiddle</title>
 		<script type="text/javascript" src="../views/head-tag.js"></script>
@@ -8,10 +8,9 @@
 			<div id="header">
 				<script type="text/javascript" src="../views/header.js"></script>
 				<script type="text/javascript" src="../javascripts/dashboard.js"></script>
-				<link rel="stylesheet" type="text/css" href="../stylesheets/test.css">
 			</div>
 		</div>
-		<div class="content">
+		<div class="content" ng-controller="DashboardCtrl">
 
 			<h1 class="center no-margin">
 				<text>Dashboard</text>
@@ -32,44 +31,16 @@
 
 						<h3>Your Events</h3>
 						<br />
-						<div class="event active" onclick="eventIsActive(this)">
+						<div id="event{{event.eventID}}" class="event" ng-click="eventIsActive(event)" ng-repeat="event in events">
 							<table>
 								<tbody>
 									<tr>
-										<td class="info-left"><h4 class="no-margin">Birthday Party</h4></td>
-										<td class="info-right"><p class="no-margin date">Wed Feb 20th</p></td>
+										<td class="info-left"><h4 class="no-margin">{{event.name}}</h4></td>
+										<td class="info-right"><p class="no-margin date">{{event.dateCreated}}</p></td>
 									</tr>
 									<tr class="info-right">
-										<td class="info-left"><p class="no-margin">12 attendees</p></td>
-										<td class="info-right"><p class="no-margin">6/8</p></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<div class="event" onclick="eventIsActive(this)">
-							<table>
-								<tbody>
-									<tr>
-										<td class="info-left"><h4 class="no-margin">TimeFiddle Meeting</h4></td>
-										<td class="info-right"><p class="no-margin date">Thu Feb 28th</p></td>
-									</tr>
-									<tr class="info-right">
-										<td class="info-left"><p class="no-margin">6 attendees</p></td>
-										<td class="info-right"><p class="no-margin">3/6</p></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<div class="event" onclick="eventIsActive(this)">
-							<table>
-								<tbody>
-									<tr>
-										<td class="info-left"><h4 class="no-margin">Date Night</h4></td>
-										<td class="info-right"><p class="no-margin date">Sat Mar 1st</p></td>
-									</tr>
-									<tr class="info-right">
-										<td class="info-left"><p class="no-margin">2 attendees</p></td>
-										<td class="info-right"><p class="no-margin">2/2</p></td>
+										<td class="info-left"><p class="no-margin">{{event.attendees}} attendees</p></td>
+										<td class="info-right"><p class="no-margin">{{event.responses}}/{{event.attendees}}</p></td>
 									</tr>
 								</tbody>
 							</table>
@@ -79,18 +50,18 @@
 				<div class="right-section">
 					<div class="main-info">
 
-						<h3>Birthday Party</h3>
+						<h3>{{currentEvent.name}}</h3>
 						<br />
 
 						<p class="event-description">
-							Hey everyone, we need to get together for John’s 28th birthday. We want everyone there, so I made a Fiddle. Please respond soon, so we can get everything ready.
+							{{currentEvent.description}}
 						</p>
 
 						<div class="response center">
 							<h3>You have not selected a time yet</h3>
 						</div>
 
-						<h4>Attendees (8)</h4>
+						<h4>Attendees ({{currentEvent.attendees}})</h4>
 						<table class="attendees">
 							<tr>
 								<td><p>Adam Sandler</p></td>

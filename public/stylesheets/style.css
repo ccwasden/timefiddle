@@ -470,8 +470,8 @@ table.login .text {
 .dashboard-content {
   border: 2px solid #1c1c1c;
   width: 945px;
+  height: 782px;
   margin: 0 auto;
-  height: 800px;
   background-color: #FCFCFC;
 }
 .dashboard-content .header {
@@ -496,13 +496,13 @@ table.login .text {
   border-right: 2px solid #a1a0a0;
   background-color: white;
   width: 95px;
-  height: 768px;
+  height: 750px;
 }
 .dashboard-content .middle-section {
   float: left;
   border-right: 2px solid #a1a0a0;
   width: 350px;
-  height: 768px;
+  height: 750px;
 }
 .dashboard-content .middle-section .event-list {
   padding: 20px;
@@ -572,7 +572,7 @@ table.login .text {
 .dashboard-content .right-section {
   float: left;
   width: 496px;
-  height: 768px;
+  height: 750px;
   background-color: #EEEEEE;
 }
 .dashboard-content .right-section .main-info {
@@ -601,7 +601,7 @@ table.login .text {
   border: none;
   border-bottom: 2px solid #EEEEEE;
   padding: 5px;
-  color: #00688B;
+  color: #00688b;
 }
 .dashboard-content .right-section .main-info table.attendees td p {
   margin-bottom: 0px;

@@ -38,6 +38,7 @@ app.configure(function () {
         dest: __dirname + '/public/stylesheets',
         src: __dirname + '/src/less',
         prefix: '/stylesheets'
+        //,compress:true
     }));
 
     //Initialize the database for the app
