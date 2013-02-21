@@ -1,2 +1,2 @@
-==TimeFiddle==
+#TimeFiddle
 TimeFiddle is a new web application that helps people easily schedule meetings. It's got loads of sweet features, and it'll have some we haven't even dreamed up yet. Did we mention it's beautiful, too?
