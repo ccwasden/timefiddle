@@ -16,4 +16,8 @@ function dateRange(start, end) {
     }
 };
 
+dateRange.prototype.print = function() {
+    console.log("Start: " + this.start + "  End: " + this.end);
+};
+
 module.exports = dateRange;
