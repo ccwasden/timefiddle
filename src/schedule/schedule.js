@@ -28,16 +28,23 @@ schedule.prototype.validate = function() {
     for(var i = 0; i < this.ranges.length - 1; i++) {
         var a = this.ranges[i];
         var b = this.ranges[i+1];
-        if(a.start == b.start) {
+
+        //Convert to milliseconds for comparison
+        var aStart = a.start.getTime();
+        var aEnd = a.end.getTime();
+        var bStart = b.start.getTime();
+        var bEnd = b.end.getTime();
+
+        if(aStart == bStart) {
             throw "Date ranges cannot have the same start date!";
         }
-        if(a.end == b.end) {
+        if(aEnd== bEnd) {
             throw "Date ranges cannot have the same end date!";
         }
-        if(a.start > b.start) {
+        if(aStart > bStart) {
             throw "Sorting failed! " + a.start + " is greater than " + b.start;
         }
-        if(a.end > b.end) {
+        if(aEnd > bEnd) {
             throw "Date ranges cannot overlap!";
         }
     }

@@ -18,7 +18,7 @@ describe("Suite of dateRange tests", function() {
             var d2 = new Date("2012", "04", "01");
             var dr1 = new DateRange(d1, d2);
         }
-        expect(errFunction).toThrow();
+        expect(errFunction).toThrow("Start date must come before end date");
         expect(nonErrFunction).not.toThrow();
     });
 });
@@ -60,6 +60,32 @@ describe("Suite of tests for the schedule object", function () {
         expect(errfn).toThrow("Date ranges cannot overlap!");
     });
 
-    //TODO Test equal date ranges and dates.
+    it("Tests dateRanges with the exact same starting time", function() {
+        var dr1 = new DateRange(new Date("2012", "03", "03"), new Date("2012", "03", "04"));
+        var dr2 = new DateRange(new Date("2012", "03", "03"), new Date("2012", "03", "04"));
+        var es1 = new Schedule();
+
+        var errfn = function() {
+            es1.add(dr1);
+            es1.add(dr2);
+        };
+
+        //A form of overlap, the ranges cannot start at the same time.
+        expect(errfn).toThrow("Date ranges cannot have the same start date!");
+    });
+
+    it("Tests dateRanges with the exact same ending time", function() {
+        var dr1 = new DateRange(new Date("2012", "03", "03"), new Date("2012", "03", "07"));
+        var dr2 = new DateRange(new Date("2012", "03", "06"), new Date("2012", "03", "07"));
+        var es1 = new Schedule();
+
+        var errfn = function() {
+            es1.add(dr1);
+            es1.add(dr2);
+        };
+
+        //A form of overlap, the ranges cannot end at the same time.
+        expect(errfn).toThrow("Date ranges cannot have the same end date!");
+    });
 
 });
