@@ -16,12 +16,19 @@ exports.init = function() {
         var mongoDriver = require("mongojs");
 
         // All collections used by the file need to be referenced here first.
-        var collections = ["event", "log", "userinformation"];
+        var collections = ["event", "log", "userinformation", "user", "session"];
 
         // Specify IP, Port, and db to connect to here
         var connectionInfo = "127.0.0.1:27017/timefiddle";
         db = mongoDriver.connect(connectionInfo, collections);
-        initialized = true;
+        db.log.findOne({status : "INFO"}, function (err, results) {
+            if(err) {
+                throw "Database initialization failed!";
+            }
+            else {
+                initialized = true;
+            }
+        });
     }
 };
 
@@ -41,39 +48,37 @@ exports.saveLog = function(log) {
  *  @param limit The number of results to limit the search to
  */
 exports.findLogByStatusType = function(status, limit) {
-
+    //TODO complete this function
 };
 
 /**
- *    Saves the authorization token for the current user. access_token is analogous to a session_id
- *     TODO this should probably have a callback
+ *    Returns whether or not the user is authorized.
+ *    Calls the callback function if they are authorized, passing in a valid user object.
  */
-exports.saveUserAuthorization = function(userID, access_token) {
-    db.userauthorization.save({'userID':userID, 'access_token':access_token}, function (err, saved) {
-        if (err || !saved) {
-            log.log("Error occured while saving userauthorization " + JSON.stringify(err));
+exports.authenticateUser = function(username, password, callback) {
+    //TODO salt and hash passwords!
+    var query = {"username":username, "password":password };
+    db.user.findOne(query, {username: 1, password: 1, id: 1, _id : -1}, function (err, results) {
+        if(err) {
+            callback(err);
         }
-    });
-};
-
-/**
- *    Returns whether or not the user (specified by userID) is still authorized.
- *    Does so by calling the function specified by callback and passing it a value of
- *    true is they are authorized and false if they are not
- */
-exports.isUserAuthorized = function(userID, access_token, callback) {
-    db.userauthorization.find({'userID':userID, 'access_token':access_token}, function (err, results) {
-        var found = false;
-        console.log("results from db " + JSON.stringify(results));
-        //TODO: add timeout check!
-        if (results && results.length == 1) {
-            callback(true, results[0].userID);
+        else if (results) {
+            var user = {"username": results.username, "id" : results.id, "validPassword": true};
+            callback(null, user);
         }
         else {
-            callback(false);
+            callback(null, false);
         }
     });
 };
+
+exports.serializeUser = function(user, done) {
+    console.log("Serializing user");
+};
+
+exports.deserializeUser = function(id, done) {
+    console.log("DEserializing user");
+}
 
 /**
  *    Stores basic information about a user including the UUID used in sending push requests to the phone

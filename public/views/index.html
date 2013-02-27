@@ -36,11 +36,11 @@
 				<h1 class="center">Login</h1>
 			</div>
 			<div class="modal-body">
-				<form action="putintheaction">
+				<form name="loginForm" action="/login" method="post">
 					<table class="login">
 						<tr>
 							<td>
-								<input type="text" name="user-name" placeholder="Username" class="text"/>
+								<input type="text" name="username" placeholder="Username" class="text"/>
 							</td>
 							<td>
 								Login with facebook
@@ -59,7 +59,7 @@
 				</form>
 			</div>
 			<div class="modal-footer center">
-				<input type="submit" value="Go" class="button small">
+				<input type="submit" value="Go" class="button small" onclick="document.forms['loginForm'].submit()">
 			</div>
 		</div>
 		<div id="footer" class="center main-wrapper">

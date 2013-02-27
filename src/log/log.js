@@ -22,7 +22,7 @@ function log(message, status, obj) {
     if (typeof message === 'string') {
         console.log(status + " " + date + message);
         dbLog.status = status;
-        dbLog.date = date;
+        dbLog.date = d;
         dbLog.message = message;
         db.saveLog(dbLog);
     }

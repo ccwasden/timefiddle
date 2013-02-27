@@ -7,11 +7,15 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var lessMiddleware = require("less-middleware");
+var passport = require("passport");
+var LocalStrategy = require("passport-local").Strategy;
+var MongoStore = require('connect-mongo')(express);
 
 //Our custom modules
 var logger = require(__dirname + '/src/log/log');
 var db = require(__dirname + '/src/database/database');
 var routes = require(__dirname + '/routes');
+var authentication = require(__dirname + '/src/authentication/authentication');
 
 //Our custom modules that need no further references
 require(__dirname + '/src/string/string');
@@ -26,6 +30,14 @@ app.configure(function () {
     app.use(express.favicon());
     app.use(express.bodyParser());
     app.use(express.methodOverride());
+    app.use(express.cookieParser());
+    app.use(express.session({
+        secret: "chucks fun time emporium",
+        store: new MongoStore({db: "timefiddle"}),
+        cookie: { maxAge: 60000 }
+    }));
+    app.use(passport.initialize());
+    app.use(passport.session());
     app.use(app.router);
     app.use(logger.logRequest());
 
@@ -43,6 +55,15 @@ app.configure(function () {
 
     //Initialize the database for the app
     db.init();
+
+    //Configure Authentication settings
+    passport.use(new LocalStrategy(authentication.authStrategy));
+    passport.serializeUser(function(user, done) {
+        done(null,user.id);
+    });
+    passport.deserializeUser(function(obj, done) {
+        done(null,obj);
+    });
 
     //Path to static files
     app.use(express.static(path.join(__dirname, 'public')));
@@ -84,10 +105,25 @@ app.get('/home', routes.home);
 app.get('/users', routes.user.list);
 app.get('/create', routes.event.create);
 app.get('/login', routes.login);
-app.get('/dashboard', routes.dashboard);
 app.get('/download', routes.mobile.download);
+
+//Routes that require authentication
+app.get('/dashboard', ensureAuthenticated, routes.dashboard);
+
+app.post('/login', passport.authenticate('local', { successRedirect: '/dashboard', failureRedirect: '/login' }));
 app.post('/sendEmail', routes.email.send);
 
 http.createServer(app).listen(app.get('port'), function () {
     logger.info("Express server listening on port " + app.get('port'));
 });
+
+/**
+ * Simple route middleware to ensure user is authenticated.
+ * Use this route middleware on any resource that needs to be protected.
+ * If the request is authenticated (typically via a persistent login session),
+ * the request will proceed.  Otherwise, the user will be redirected to the login page.
+ */
+function ensureAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) { return next(); }
+    res.redirect('/login')
+}
