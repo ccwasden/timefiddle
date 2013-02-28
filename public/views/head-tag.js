@@ -1,6 +1,6 @@
 document.write(	'<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">'+
 	
-				'<script type="text/javascript" src="../javascripts/jquery.min.js">'+
+				'<script type="text/javascript" src="../javascripts/min/jquery.min.js">'+
 
 				'</script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'+
 
@@ -12,7 +12,7 @@ document.write(	'<link rel="shortcut icon" href="../images/favicon.ico" type="im
 
 				'<link rel="stylesheet" type="text/css" href="../plugins/bootstrap/css/bootstrap.css">'+
 
-				'<script type="text/javascript" src="../javascripts/angular.min.js"></script>'
+				'<script type="text/javascript" src="../javascripts/min/angular.min.js"></script>'
 				//'<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>'
 
 				//
