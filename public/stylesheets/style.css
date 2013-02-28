@@ -466,83 +466,91 @@ table.login .text {
 /***END LOGIN***/
 /***DASHBOARD***/
 .dashboard-content {
-  border: 2px solid #1c1c1c;
-  width: 945px;
-  height: 782px;
+  border: 0px solid #1c1c1c;
+  width: 100%;
+  min-height: 1030px;
   margin: 0 auto;
-  background-color: #FCFCFC;
+  background-color: #fafafa;
 }
-.dashboard-content .header {
+.dashboard-content > .header {
   width: 100%;
   height: 30px;
-  border-bottom: 2px solid #1c1c1c;
-  background-color: white;
+  border-bottom: 0px solid #1c1c1c;
+  background-color: #00688b;
 }
-.dashboard-content .header .account {
+.dashboard-content > .header .account {
   float: right;
   padding-right: 20px;
 }
-.dashboard-content .header .account p a {
-  padding-left: 10px;
-  color: #00688b;
+.dashboard-content > .header .account p {
+  color: #fafafa;
 }
-.dashboard-content .header .account p a:hover {
-  color: #a1a0a0;
+.dashboard-content > .header .account p a {
+  padding-left: 10px;
+  color: #aae4ec;
+}
+.dashboard-content > .header .account p a:hover {
+  color: #fafafa;
 }
 .dashboard-content .left-bar {
   float: left;
-  border-right: 2px solid #a1a0a0;
-  background-color: white;
+  border-right: 0px solid #a1a0a0;
+  background-color: #fafafa;
   width: 95px;
-  height: 750px;
+  min-height: 1000px;
+  overflow: hidden;
 }
-.dashboard-content .middle-section {
+.dashboard-content .left-bar .sub-tab {
+  width: 100%;
+  height: 95px;
+}
+.dashboard-content #dashboard-main {
+  overflow: hidden;
+}
+.dashboard-content #dashboard-main .middle-section {
   float: left;
-  border-right: 2px solid #a1a0a0;
+  border-right: 0px solid #a1a0a0;
   width: 350px;
-  height: 750px;
+  min-height: 1000px;
+  overflow: hidden;
+  background: #E0E0E0;
 }
-.dashboard-content .middle-section .event-list {
-  padding: 20px;
+.dashboard-content #dashboard-main .middle-section .event-list {
+  padding: 20px 0px 20px 20px;
 }
-.dashboard-content .middle-section .event-list .event {
+.dashboard-content #dashboard-main .middle-section .event-list .event {
   clear: both;
   padding: 5px;
-  border: 2px solid #cccccc;
+  margin-right: 20px;
+  border: 0px solid #cccccc;
   margin-bottom: 10px;
   overflow: hidden;
-  background-color: white;
+  background-color: #fafafa;
 }
-.dashboard-content .middle-section .event-list .event table {
+.dashboard-content #dashboard-main .middle-section .event-list .event table {
   width: 100%;
 }
-.dashboard-content .middle-section .event-list .event .info-left {
+.dashboard-content #dashboard-main .middle-section .event-list .event .info-left {
   text-align: left;
 }
-.dashboard-content .middle-section .event-list .event .info-left p {
+.dashboard-content #dashboard-main .middle-section .event-list .event .info-left p {
   font-family: "OpenSansLight", Arial, Helvetica, Tahoma, sans-serif;
   font-size: 15px;
 }
-.dashboard-content .middle-section .event-list .event .info-right {
+.dashboard-content #dashboard-main .middle-section .event-list .event .info-right {
   text-align: right;
 }
-.dashboard-content .middle-section .event-list .event .info-right p {
+.dashboard-content #dashboard-main .middle-section .event-list .event .info-right p {
   font-family: "OpenSansLight", Arial, Helvetica, Tahoma, sans-serif;
   font-size: 15px;
 }
-.dashboard-content .middle-section .event-list .event .info-right p.date {
+.dashboard-content #dashboard-main .middle-section .event-list .event .info-right p.date {
   color: #00688b;
 }
-.dashboard-content .middle-section .event-list .event.active {
-  background-color: #00688b;
+.dashboard-content #dashboard-main .middle-section .event-list .event.active {
+  margin-right: 0px;
 }
-.dashboard-content .middle-section .event-list .event.active h4 {
-  color: white;
-}
-.dashboard-content .middle-section .event-list .event.active p {
-  color: #aae4ec !important;
-}
-.dashboard-content .middle-section .event-list .event:hover {
+.dashboard-content #dashboard-main .middle-section .event-list .event:hover {
   background-color: #00688b;
   -webkit-transition: background-color 100ms linear;
   -moz-transition: background-color 100ms linear;
@@ -551,7 +559,7 @@ table.login .text {
   transition: background-color 100ms linear;
   cursor: pointer;
 }
-.dashboard-content .middle-section .event-list .event:hover h4 {
+.dashboard-content #dashboard-main .middle-section .event-list .event:hover h4 {
   color: white;
   -webkit-transition: color 100ms linear;
   -moz-transition: color 100ms linear;
@@ -559,7 +567,7 @@ table.login .text {
   -ms-transition: color 100ms linear;
   transition: color 100ms linear;
 }
-.dashboard-content .middle-section .event-list .event:hover p {
+.dashboard-content #dashboard-main .middle-section .event-list .event:hover p {
   color: #aae4ec !important;
   -webkit-transition: color 100ms linear;
   -moz-transition: color 100ms linear;
@@ -567,41 +575,30 @@ table.login .text {
   -ms-transition: color 100ms linear;
   transition: color 100ms linear;
 }
-.dashboard-content .right-section {
-  float: left;
-  width: 496px;
-  height: 750px;
-  background-color: #EEEEEE;
+.dashboard-content #dashboard-main .right-section {
+  float: none;
+  min-height: 1000px;
+  background-color: #fafafa;
+  display: block;
+  overflow: hidden;
 }
-.dashboard-content .right-section .main-info {
+.dashboard-content #dashboard-main .right-section .header {
   padding: 20px;
 }
-.dashboard-content .right-section .main-info .response {
+.dashboard-content #dashboard-main .right-section .header .response {
   padding: 10px;
-  border: 2px solid #CDCDCD;
-  background-color: #E0E0E0;
+  border: 0px solid #cdcdcd;
+  background-color: #00688b;
   margin-bottom: 20px;
+  width: 50%;
 }
-.dashboard-content .right-section .main-info .response h3 {
-  opacity: .5;
+.dashboard-content #dashboard-main .right-section .header .response h3 {
+  color: #fafafa;
 }
-.dashboard-content .right-section .main-info table.attendees {
-  border-spacing: 0px;
+.dashboard-content #dashboard-main .right-section .d-navbar {
   width: 100%;
-  margin-bottom: 20px;
-}
-.dashboard-content .right-section .main-info table.attendees tr td:last-child {
-  font-size: 14px;
-  text-align: right;
-}
-.dashboard-content .right-section .main-info table.attendees td {
-  background-color: white;
-  border: none;
-  border-bottom: 2px solid #EEEEEE;
-  padding: 5px;
+  padding: 10px;
+  background: #f0f0f0;
   color: #00688b;
-}
-.dashboard-content .right-section .main-info table.attendees td p {
-  margin-bottom: 0px;
 }
 /***END DASHBOARD***/

@@ -1,4 +1,6 @@
-document.write(	'<script type="text/javascript" src="../javascripts/jquery.min.js">'+
+document.write(	'<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">'+
+	
+				'<script type="text/javascript" src="../javascripts/jquery.min.js">'+
 
 				'</script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />'+
 
