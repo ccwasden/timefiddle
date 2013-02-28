@@ -1,131 +1,79 @@
-==TimeFiddle API==
-This page contains the documentation for using the TimeFiddle API. Note that each of the requests should be prepended with /api. For example the full request to create a user will look like
-"timefiddle.com/api/user/create"
-
-==Methods==
-* [[#/user|user]]
-** [[#/user/create|create]]
-** [[#/user/login|login]]
-* [[#/event|event]]
-** [[#/event/create|create]]
-** [[#/event/get|get]]
-** [[#/event/update|update]]
-** [[#/event/delete|delete]]
-
-=/user=
-==POST /user/create==
-{| class="TablePager"
-! Name !! Type !! Required !! Description
-|-
-| email || String || Yes || The email (ie. username) of the user to create
-|-
-| password || String || Yes || The password the user has selected
-|-
-| name || String || No || The user's name
-|}
-
-* Example Response
-** { status : 200 , userID : "123489", email : "something@something.com" }
-* Error Codes
-** { status : 401, error : "Something" }
-
-==POST /user/login==
-{| class="TablePager"
-! Name !! Type !! Required !! Description
-|-
-| email || String || Yes || The username (ie. email) of the user
-|-
-| password || String || Yes || The user's password (md5? sha256?)
-|}
-
-* Example Response
-** { status : 200 , userID : "123489", email : "something@something.com" }
-* Error Codes
-** { status : 401, error : "Something" }
-
-==POST or GET /user/logout ==
-{| class="TablePager"
-! Name !! Type !! Required !! Description
-|-
-| NONE || || ||
-|}
-
-* Example Response
-** { status : 200  }
-* Error Codes
-**
-
-=/event=
-==/event/create==
-{| class="TablePager"
-! Name !! Type !! Required !! Description
-|-
-| name || String || Yes || Name of event
-|-
-| description || String || No || Description of event
-|-
-| selectedTimes || Array, [[media:event.pdf|eventDay]] || Yes || An array of eventTime objects that indicate when the possible times others can select from
-|-
-| attendees || Array, [[media:event.pdf|eventInvite]]|| Yes || An array of eventInvite objects that indicate who has been invited to the event
-|}
-
-* Example Response
-** { status : 200 , error : "", eventID: "12345" }
-* Error Codes
-** { status : 401, error : "Something" }
-* Request Options
-
-==TODO==
-* event/get
-* event/update
-* event/delete
-* Registering a Mobile Device for push notifications
-* /user/update
-
+/**
+ * Documentation goes here
+ */
+<user>
+{
+  name: "",
+  emails: "",
+  password: "",
+  facebookKey: "",
+  googleKey: "",
+  appleUUID: "",
+  googleUUID: "",
+}
 
 /**
-*	Description of a typical event object in JSON.
-* 	Fields marked with a star are required for that specific object.
-*/
+ * Documentation goes here
+ */
+<email>
+{
+  email: "",
+  isValidated: <boolean>
+}
 
+/**
+ * Documentation goes here
+ */
 <event>
 {
-	eventID* : "",					//Globally unique id for generating links
-	name* : "",
-	description : "",				//Should this be required of the user?
-	schedule* : [<eventDay>],		//The available times selected by the event creator
-	createdBy : "<userID>", 		//Can be created by anonymous user
-	attendees :  [<eventInvite>], 	//Can be open to all
-	responses : [<eventResponse>]	//Will be empty when first created
-	selectedTime : <DateTime>		//Will be set after they choose
+  eventID* : "", //Globally unique id for generating links
+  name* : "",
+  description : "", //Should this be required of the user?
+  schedule* : <schedule>, //The available times selected by the event creator
+  createdBy : "<userID>", //Can be created by anonymous user
+  attendees :  [<eventInvite>], //Can be open to all
+  responses : [<eventResponse>]	//Will be empty when first created
+  selectedTime : <DateTime> //Will be set after they choose
 }
 
-<eventDay>
+/**
+ * Documentation goes here
+ */
+<schedule>
 {
-	date* : <Date>,
-	availableRanges* : [<dateRange>],	//These should never overlap each other.
+  availableRanges* : [<dateRange>], //These should never overlap each other.
 }
 
+/**
+ * Documentation goes here
+ */
 <dateRange>
 {
-	start* : "",
-	end* : ""
+  start* : "",
+  end* : ""
 }
 
+/**
+ * Documentation goes here
+ */
 <eventInvite>
 {
-	inviteID* : "",					//Auto-generate, used to track anonymous responses from a URL
-	userID : "",					//Only used if they are a user of the app
-	email : "",						//Required to have a userID, email, facebookID or googleID
-	facebookID : "",				//These may change according to the respective APIs structure
-	googleID : ""
+  inviteID* : "", //Auto-generate, used to track anonymous responses from a URL
+  userID : "", //Only used if they are a user of the app
+  email : "", //Required to have a userID, email, facebookID or googleID
+  facebookID : "", //These may change according to the respective APIs structure
+  googleID : ""
+  eventResponse: <eventResponse>
 }
 
+/**
+ * Documentation goes here
+ */
 <eventResponse>
 {
-	inviteID* : "",
-	voteTime : <Date>,				//When they voted/submitted their own availability
-	userID : "",					//Either needs userID or name
-	name : "",
-	schedule : [<eventDay>]			//Actual responses for when they are available
+  inviteID* : "",
+  voteTime : <Date>, //When they voted/submitted their own availability
+  userID : "", //Either needs userID or name
+  name : "",
+  schedule : <schedule> //Actual responses for when they are available
 }
