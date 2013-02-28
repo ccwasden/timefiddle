@@ -1,5 +1,3 @@
-exports.download = function(req, res){
-  
+exports.index = function(req, res){
   	res.sendfile('./public/views/download-for-mobile.html');
-  
 };

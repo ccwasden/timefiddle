@@ -61,8 +61,9 @@ app.configure(function () {
     passport.serializeUser(function(user, done) {
         done(null,user.id);
     });
-    passport.deserializeUser(function(obj, done) {
-        done(null,obj);
+    passport.deserializeUser(function(id, done) {
+        //TODO reload the user from the DB by the id
+        done(null,id);
     });
 
     //Path to static files
@@ -101,20 +102,21 @@ app.configure('production', function () {
 
 //Define routes for the app. Basically creating a mapping between URLs and functions
 app.get('/', routes.index);
-app.get('/home', routes.home);
-app.get('/users', routes.user.list);
-app.get('/create', routes.event.create);
-app.get('/download', routes.mobile.download);
+app.get('/home', routes.home.index);
+app.get('/create', routes.event.index);
+app.get('/download', routes.download.index);
+app.get('/login', routes.login.index);
 
-app.get('/login', routes.login);
-app.get('/logout', function(req, res){
-    req.logout();
-    res.redirect('/home');
-});
 //Routes that require authentication
-app.get('/dashboard', ensureAuthenticated, routes.dashboard);
+app.get('/dashboard', ensureAuthenticated, routes.dashboard.index);
 
-app.post('/login', passport.authenticate('local', { successRedirect: '/dashboard', failureRedirect: '/login' }));
+//API POST requests
+app.all('/api/user/logout', routes.user.logout);
+app.post('/api/user/login', routes.user.login);
+app.post('/api/user/register', routes.user.register);
+app.post('/api/event/create', routes.event.create);
+
+//TODO refactor
 app.post('/sendEmail', routes.email.send);
 
 http.createServer(app).listen(app.get('port'), function () {

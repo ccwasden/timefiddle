@@ -72,14 +72,6 @@ exports.authenticateUser = function(username, password, callback) {
     });
 };
 
-exports.serializeUser = function(user, done) {
-    console.log("Serializing user");
-};
-
-exports.deserializeUser = function(id, done) {
-    console.log("DEserializing user");
-}
-
 /**
  *    Stores basic information about a user including the UUID used in sending push requests to the phone
  *    Called when a user first launches the app on their phone.

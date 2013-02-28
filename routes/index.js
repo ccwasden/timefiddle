@@ -2,10 +2,12 @@ exports.index = function(req, res){
   res.sendfile('./public/views/construction.html');
 };
 
-exports.dashboard = require('./dashboard').index;
-exports.email = require('./email');
+exports.home = require('./home');
 exports.event = require('./event');
-exports.login = require('./login').index;
-exports.mobile = require('./mobile');
+exports.download = require('./download');
+exports.login = require('./login');
+
+exports.dashboard = require('./dashboard');
 exports.user = require('./user');
-exports.home = require('./home').index;
+
+exports.email = require('./email');
