@@ -34,7 +34,7 @@ app.configure(function () {
     app.use(express.session({
         secret: "chucks fun time emporium",
         store: new MongoStore({db: "timefiddle"}),
-        cookie: { maxAge: 60000 }
+        cookie: { maxAge: 600000 }
     }));
     app.use(passport.initialize());
     app.use(passport.session());
@@ -104,9 +104,13 @@ app.get('/', routes.index);
 app.get('/home', routes.home);
 app.get('/users', routes.user.list);
 app.get('/create', routes.event.create);
-app.get('/login', routes.login);
 app.get('/download', routes.mobile.download);
 
+app.get('/login', routes.login);
+app.get('/logout', function(req, res){
+    req.logout();
+    res.redirect('/home');
+});
 //Routes that require authentication
 app.get('/dashboard', ensureAuthenticated, routes.dashboard);
 
