@@ -3,13 +3,14 @@
  */
 <user>
 {
+  userId : "",
   name: "",
   emails: [<email>],
   password: "",
   facebookKey: "",
   googleKey: "",
-  appleUUID: "",
-  googleUUID: "",
+  appleUUID: [""],
+  googleUUID: [""],
 }
 
 /**
@@ -31,9 +32,10 @@
   description : "", //Should this be required of the user?
   schedule* : <schedule>, //The available times selected by the event creator
   createdBy : "<userID>", //Can be created by anonymous user
+  createdDate : <Date>, //Javascript date
   invites :  [<invite>], //Can be open to all
   responses : [<response>],	//Will be empty when first created
-  selectedTime : <Date> //Will be set after they choose
+  selectedTime : <dateRange> //Will be set after they choose
 }
 
 /**
@@ -66,8 +68,7 @@
   userID : "", //Only used if they are a user of the app
   email : "", //Required to have a userID, email, facebookID or googleID
   facebookID : "", //These may change according to the respective APIs structure
-  googleID : "",
-  response : <response>
+  googleID : ""
 }
 
 /**
