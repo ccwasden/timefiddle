@@ -4,7 +4,7 @@
 <user>
 {
   name: "",
-  emails: "",
+  emails: [<email>],
   password: "",
   facebookKey: "",
   googleKey: "",
@@ -13,7 +13,7 @@
 }
 
 /**
- * Documentation goes here
+ * Used to track if they have validated their email as of yet.
  */
 <email>
 {
@@ -31,24 +31,28 @@
   description : "", //Should this be required of the user?
   schedule* : <schedule>, //The available times selected by the event creator
   createdBy : "<userID>", //Can be created by anonymous user
-  attendees :  [<eventInvite>], //Can be open to all
-  responses : [<eventResponse>]	//Will be empty when first created
-  selectedTime : <DateTime> //Will be set after they choose
+  invites :  [<invite>], //Can be open to all
+  responses : [<response>],	//Will be empty when first created
+  selectedTime : <Date> //Will be set after they choose
 }
 
 /**
- * Documentation goes here
+ * Represents the schedule of available times chosen by the event creator
+ * or by someone responding to the event.
+ * The array of dateRanges are guaranteed not to overlap.
  */
 <schedule>
 {
-  availableRanges* : [<dateRange>], //These should never overlap each other.
+  ranges* : [<dateRange>]
 }
 
 /**
- * Documentation goes here
+ * Represents a range of time for which the user is available.
+ * The only constraint is that start must come before end.
  */
 <dateRange>
 {
+  dateRangeID* : "",
   start* : "",
   end* : ""
 }
@@ -56,20 +60,20 @@
 /**
  * Documentation goes here
  */
-<eventInvite>
+<invite>
 {
-  inviteID* : "", //Auto-generate, used to track anonymous responses from a URL
+  inviteID* : "", //Auto-generated, used to track anonymous responses from a URL
   userID : "", //Only used if they are a user of the app
   email : "", //Required to have a userID, email, facebookID or googleID
   facebookID : "", //These may change according to the respective APIs structure
-  googleID : ""
-  eventResponse: <eventResponse>
+  googleID : "",
+  response : <response>
 }
 
 /**
  * Documentation goes here
  */
-<eventResponse>
+<response>
 {
   inviteID* : "",
   voteTime : <Date>, //When they voted/submitted their own availability
