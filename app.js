@@ -102,7 +102,6 @@ app.configure('production', function () {
 
 //Define routes for the app. Basically creating a mapping between URLs and functions
 app.get('/', routes.index);
-app.get('/home', routes.home.index);
 app.get('/create', routes.event.index);
 app.get('/download', routes.download.index);
 app.get('/login', routes.login.index);
@@ -113,7 +112,7 @@ app.get('/dashboard', ensureAuthenticated, routes.dashboard.index);
 //API POST requests
 app.all('/api/user/logout', routes.user.logout);
 app.post('/api/user/login', routes.user.login);
-app.post('/api/user/register', routes.user.register);
+app.post('/api/user/create', routes.user.create);
 app.post('/api/event/create', routes.event.create);
 
 //TODO refactor

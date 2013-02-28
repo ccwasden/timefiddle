@@ -9,7 +9,9 @@ exports.logout = function(req, res){
 
 exports.login = require("passport").authenticate('local', { successRedirect: '/dashboard', failureRedirect: '/login' });
 
-exports.register = function(req, res) {
+exports.create = function(req, res) {
+    res.json({"TODO": "implement"});
+    res.end();
     //TODO implement
 };
 
