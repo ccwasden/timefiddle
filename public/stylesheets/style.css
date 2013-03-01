@@ -612,3 +612,40 @@ table.login .text {
   color: #0071bc;
 }
 /***END DASHBOARD***/
+
+/***CALENDAR***/
+
+.calendar {
+	margin: 20px;
+}
+
+.calendar table {
+	border-collapse:separate;
+	border-spacing: 5px
+}
+
+.cal_title {
+	text-align: left;
+	color: #444;
+}
+
+.calendar td {
+	text-align: center;
+	width: 28px;
+	height: 28px;
+	color: #444;
+}
+
+td.cal_prevDate {
+	color: #ccc;
+	cursor: default;
+}
+
+td.cal_selectable {
+	cursor: pointer;
+}
+
+td.cal_selected {
+	color: white;
+	background-color: #0071bc;
+}

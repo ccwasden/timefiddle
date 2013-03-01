@@ -1,9 +1,8 @@
-$(function(e){
+$(document).ready(function(){
 
 	var events = $(".event");
 	$(events[0]).addClass("active");
-
-
+	
 });
 
 
