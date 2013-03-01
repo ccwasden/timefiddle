@@ -75,7 +75,7 @@ h1 > strong,
 h2.big > strong {
   font-family: "OpenSansRegular", Arial, Helvetica, Tahoma, sans-serif;
   font-weight: normal;
-  color: #00688b;
+  color: #0071bc;
 }
 h2 {
   font-size: 24px;
@@ -114,7 +114,7 @@ h6 {
 /* Basic Elements */
 a {
   outline: none;
-  color: #00688b;
+  color: #0071bc;
 }
 ul {
   list-style: none;
@@ -168,10 +168,10 @@ textarea {
   text-shadow: 0 1px 0 white;
 }
 #header ul li a:hover {
-  color: #00688b;
+  color: #0071bc;
 }
 #header ul li.active a {
-  color: #00688b;
+  color: #0071bc;
   border-bottom: 1px solid #eee;
 }
 /* Begin of footer */
@@ -196,10 +196,10 @@ textarea {
   color: #b6b5b5;
 }
 #footer ul li a:hover {
-  color: #00688b;
+  color: #0071bc;
 }
 #footer ul li.active a {
-  color: #00688b;
+  color: #0071bc;
 }
 .seperator hr {
   border-top: 1px solid #EEE;
@@ -349,7 +349,7 @@ a.email:focus {
   display: inline-block;
   cursor: pointer;
   padding: 5px 12px 5px 12px;
-  background-color: #00688b;
+  background-color: #0071bc;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), inset 0 1px rgba(255, 255, 255, 0.25);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), inset 0 1px rgba(255, 255, 255, 0.25);
   border: solid 1px #2473b0;
@@ -468,19 +468,29 @@ table.login .text {
 .dashboard-content {
   border: 0px solid #1c1c1c;
   width: 100%;
-  min-height: 1030px;
+  min-height: 140px;
   margin: 0 auto;
   background-color: #fafafa;
 }
 .dashboard-content > .header {
   width: 100%;
-  height: 30px;
+  height: 40px;
   border-bottom: 0px solid #1c1c1c;
-  background-color: #00688b;
+  background-color: #0071bc;
+}
+.dashboard-content > .header .logo {
+  position: absolute;
+  left: 5;
+  top: 5;
+}
+.dashboard-content > .header .logo img {
+  max-height: 30px;
 }
 .dashboard-content > .header .account {
   float: right;
   padding-right: 20px;
+  position: relative;
+  top: 5;
 }
 .dashboard-content > .header .account p {
   color: #fafafa;
@@ -497,7 +507,7 @@ table.login .text {
   border-right: 0px solid #a1a0a0;
   background-color: #fafafa;
   width: 95px;
-  min-height: 1000px;
+  min-height: 100%;
   overflow: hidden;
 }
 .dashboard-content .left-bar .sub-tab {
@@ -511,7 +521,7 @@ table.login .text {
   float: left;
   border-right: 0px solid #a1a0a0;
   width: 350px;
-  min-height: 1000px;
+  min-height: 100%;
   overflow: hidden;
   background: #E0E0E0;
 }
@@ -545,13 +555,13 @@ table.login .text {
   font-size: 15px;
 }
 .dashboard-content #dashboard-main .middle-section .event-list .event .info-right p.date {
-  color: #00688b;
+  color: #0071bc;
 }
 .dashboard-content #dashboard-main .middle-section .event-list .event.active {
   margin-right: 0px;
 }
 .dashboard-content #dashboard-main .middle-section .event-list .event:hover {
-  background-color: #00688b;
+  background-color: #0071bc;
   -webkit-transition: background-color 100ms linear;
   -moz-transition: background-color 100ms linear;
   -o-transition: background-color 100ms linear;
@@ -577,7 +587,7 @@ table.login .text {
 }
 .dashboard-content #dashboard-main .right-section {
   float: none;
-  min-height: 1000px;
+  min-height: 100%;
   background-color: #fafafa;
   display: block;
   overflow: hidden;
@@ -588,7 +598,7 @@ table.login .text {
 .dashboard-content #dashboard-main .right-section .header .response {
   padding: 10px;
   border: 0px solid #cdcdcd;
-  background-color: #00688b;
+  background-color: #0071bc;
   margin-bottom: 20px;
   width: 50%;
 }
@@ -599,6 +609,6 @@ table.login .text {
   width: 100%;
   padding: 10px;
   background: #f0f0f0;
-  color: #00688b;
+  color: #0071bc;
 }
 /***END DASHBOARD***/

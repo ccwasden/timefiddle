@@ -1,6 +1,6 @@
 /***GLOBAL VARIABLES***/
 
-@main-color: #00688B;
+@main-color: #0071BC;
 @main-light-color:#AAE4EC;
 @main-black-color: #1C1C1C;
 @background-color:#FAFAFA;
@@ -606,10 +606,11 @@ table.login {
 /***DASHBOARD***/
 
 @d-border-size: 0px;
-@d-header-height:30px;
-@d-section-height: 1000px;
-@d-padding:20px;
-@d-margin:20px;
+@d-header-height: 40px;
+@d-header-logo-height: @d-header-height - 10;
+@d-section-height: 100%;
+@d-padding: 20px;
+@d-margin: 20px;
 
 
 @d-leftbar-height: @d-section-height;
@@ -633,23 +634,35 @@ table.login {
 	background-color: @background-color;
 
 	> .header {
-		width:100%;
-		height:@d-header-height;
-		border-bottom:@d-border-size solid @main-black-color;
+		width: 100%;
+		height: @d-header-height;
+		border-bottom: @d-border-size solid @main-black-color;
 		background-color: @main-color;
 
+		.logo {
+			position: absolute;
+			left: 5;
+			top: 5;
+
+			img {
+				max-height:@d-header-logo-height;
+			}
+		}
+
 		.account {
-			float:right;
-			padding-right:@d-padding;
+			float: right;
+			padding-right: @d-padding;
+			position: relative;
+			top: 5;
 
 			p {
-				color:@background-color;
+				color: @background-color;
 				a {
-					padding-left:10px;
-					color:@main-light-color;
+					padding-left: 10px;
+					color: @main-light-color;
 
 					&:hover {
-						color:@background-color;
+						color: @background-color;
 					}
 				}
 			}
