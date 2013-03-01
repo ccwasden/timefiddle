@@ -10,7 +10,7 @@
   facebookKey: "",
   googleKey: "",
   appleUUID: [""],
-  googleUUID: [""],
+  googleUUID: [""]
 }
 
 /**
